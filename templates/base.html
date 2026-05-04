@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CMB Final Project{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M22 4c0 8 20 12 20 20s-20 12-20 20 20 12 20 20' fill='none' stroke='%239cd43e' stroke-width='3' stroke-linecap='round'/><path d='M42 4c0 8-20 12-20 20s20 12 20 20-20 12-20 20' fill='none' stroke='%238d6e63' stroke-width='3' stroke-linecap='round'/><line x1='24' y1='14' x2='40' y2='14' stroke='%23b8e06a' stroke-width='2'/><line x1='22' y1='24' x2='42' y2='24' stroke='%23b8e06a' stroke-width='2'/><line x1='24' y1='34' x2='40' y2='34' stroke='%23b8e06a' stroke-width='2'/><line x1='22' y1='44' x2='42' y2='44' stroke='%23b8e06a' stroke-width='2'/><line x1='24' y1='54' x2='40' y2='54' stroke='%23b8e06a' stroke-width='2'/></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <canvas id="dna-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="nav-logo">
+                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="16" stroke="#9cd43e" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="18" cy="18" rx="6" ry="16" stroke="#8d6e63" stroke-width="1.5" opacity="0.5"/>
+                    <ellipse cx="18" cy="18" rx="16" ry="6" stroke="#8d6e63" stroke-width="1.5" opacity="0.5"/>
+                    <circle cx="18" cy="18" r="4" fill="#7cb342" opacity="0.3"/>
+                    <circle cx="18" cy="18" r="2" fill="#b8e06a"/>
+                </svg>
+                <span>CMB Project</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('introduction') }}" class="{% if request.endpoint == 'introduction' %}active{% endif %}">Introduction</a></li>
+                <li><a href="{{ url_for('tools') }}" class="{% if request.endpoint == 'tools' %}active{% endif %}">Tools & Methods</a></li>
+                <li class="nav-dropdown">
+                    <a href="{{ url_for('results') }}" class="{% if 'results' in request.endpoint %}active{% endif %}">Results ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="{{ url_for('results_page', page_num=1) }}">Finding the Homolog</a>
+                        <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene</a>
+                        <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function</a>
+                        <a href="{{ url_for('results_page', page_num=4) }}">Homolog Structure</a>
+                        <a href="{{ url_for('results_page', page_num=5) }}">Future Work</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('discussion') }}" class="{% if request.endpoint == 'discussion' %}active{% endif %}">Discussion</a></li>
+                <li><a href="{{ url_for('references') }}" class="{% if request.endpoint == 'references' %}active{% endif %}">References</a></li>
+                <li><a href="{{ url_for('credits') }}" class="{% if request.endpoint == 'credits' %}active{% endif %}">Credits</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>CMB Final Project &copy; 2026 &middot; Ritika Dawadi </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

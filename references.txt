@@ -1,0 +1,27 @@
+
+Structure : 
+
+https://swissmodel.expasy.org/interactive/556ANH/models/
+
+https://www.compbio.dundee.ac.uk/jpred4/cgi-bin/chklog?keywords=jp_v46lrue
+
+https://bioinf.cs.ucl.ac.uk/psipred/&uuid=765f458c-3e77-11f1-b8ea-00163e100466
+
+https://alphafoldserver.com/
+
+
+Protein Function:
+
+functional and structural:
+
+https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml
+
+https://www.ebi.ac.uk/interpro/
+
+sequence motifs 
+
+hydrophillic/ hydrophobic 
+
+transmembrane domain
+
+subcellular localization 

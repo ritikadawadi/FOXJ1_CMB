@@ -1,0 +1,1328 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" version="1" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1">
+  <notes>
+    <annotation>
+      <p xmlns="http://www.w3.org/1999/xhtml">SBML generated from Reactome version 96 on 4/7/26, 9:57 AM using JSBML version 1.5.</p>
+    </annotation>
+  </notes>
+  <model id="pathway_68884" metaid="metaid_0" name="Mitotic Telophase/Cytokinesis">
+    <notes>
+      <p xmlns="http://www.w3.org/1999/xhtml">In this final phase of mitosis, new membranes are formed around two sets of chromatids and two daughter cells are formed. The chromosomes and the spindle fibers disperse, and the fiber ring around the center of the cell, composed of actin, contracts, pinching the cell into two daughter cells.</p>
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_0">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Weiser</vCard:Family>
+                  <vCard:Given>Joel</vCard:Given>
+                </vCard:N>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>OICR</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2026-03-16T14:04:25Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqbiol:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-68884" />
+              <rdf:li rdf:resource="https://identifiers.org/GO:0000281" />
+            </rdf:Bag>
+          </bqbiol:is>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout>
+        <layout:listOfCompartmentGlyphs>
+          <layout:compartmentGlyph layout:compartment="compartment_7660" layout:id="layout_240">
+            <layout:boundingBox>
+              <layout:position layout:x="64" layout:y="42" />
+              <layout:dimensions layout:height="411" layout:width="986" />
+            </layout:boundingBox>
+          </layout:compartmentGlyph>
+          <layout:compartmentGlyph layout:compartment="compartment_1598585" layout:id="layout_hidden_compartment_0">
+            <layout:boundingBox>
+              <layout:position layout:x="562" layout:y="513" />
+              <layout:dimensions layout:height="1" layout:width="1" />
+            </layout:boundingBox>
+          </layout:compartmentGlyph>
+        </layout:listOfCompartmentGlyphs>
+        <layout:listOfSpeciesGlyphs>
+          <layout:speciesGlyph layout:id="layout_93" layout:species="species_2466355">
+            <layout:boundingBox>
+              <layout:position layout:x="428" layout:y="213" />
+              <layout:dimensions layout:height="21" layout:width="56" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_94" layout:species="species_2468044">
+            <layout:boundingBox>
+              <layout:position layout:x="434" layout:y="255" />
+              <layout:dimensions layout:height="23" layout:width="46" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_95" layout:species="species_1641505">
+            <layout:boundingBox>
+              <layout:position layout:x="406" layout:y="166" />
+              <layout:dimensions layout:height="22" layout:width="115" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_96" layout:species="species_2468042">
+            <layout:boundingBox>
+              <layout:position layout:x="580" layout:y="203" />
+              <layout:dimensions layout:height="36" layout:width="96" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_270" layout:species="species_2537688">
+            <layout:boundingBox>
+              <layout:position layout:x="784" layout:y="195" />
+              <layout:dimensions layout:height="51" layout:width="114" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_301" layout:species="species_2537690">
+            <layout:boundingBox>
+              <layout:position layout:x="611" layout:y="268" />
+              <layout:dimensions layout:height="22" layout:width="73" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_302" layout:species="species_2470930">
+            <layout:boundingBox>
+              <layout:position layout:x="589" layout:y="154" />
+              <layout:dimensions layout:height="22" layout:width="82" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_303" layout:species="species_3002800">
+            <layout:boundingBox>
+              <layout:position layout:x="137" layout:y="180" />
+              <layout:dimensions layout:height="26" layout:width="103" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_327" layout:species="species_29358">
+            <layout:boundingBox>
+              <layout:position layout:x="151" layout:y="66" />
+              <layout:dimensions layout:height="30" layout:width="40" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_328" layout:species="species_156721">
+            <layout:boundingBox>
+              <layout:position layout:x="95" layout:y="107" />
+              <layout:dimensions layout:height="22" layout:width="50" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_329" layout:species="species_156685">
+            <layout:boundingBox>
+              <layout:position layout:x="274" layout:y="90" />
+              <layout:dimensions layout:height="22" layout:width="102" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_330" layout:species="species_113582">
+            <layout:boundingBox>
+              <layout:position layout:x="210" layout:y="67" />
+              <layout:dimensions layout:height="30" layout:width="41" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_332" layout:species="species_29358">
+            <layout:boundingBox>
+              <layout:position layout:x="343" layout:y="156" />
+              <layout:dimensions layout:height="30" layout:width="40" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_333" layout:species="species_156709">
+            <layout:boundingBox>
+              <layout:position layout:x="276" layout:y="142" />
+              <layout:dimensions layout:height="22" layout:width="42" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_334" layout:species="species_156695">
+            <layout:boundingBox>
+              <layout:position layout:x="241" layout:y="250" />
+              <layout:dimensions layout:height="31" layout:width="128" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_335" layout:species="species_113582">
+            <layout:boundingBox>
+              <layout:position layout:x="336" layout:y="208" />
+              <layout:dimensions layout:height="30" layout:width="41" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+        </layout:listOfSpeciesGlyphs>
+        <layout:listOfReactionGlyphs>
+          <layout:reactionGlyph layout:id="layout_92" layout:reaction="reaction_2468040">
+            <layout:boundingBox>
+              <layout:position layout:x="538" layout:y="215" />
+              <layout:dimensions layout:height="12" layout:width="12" />
+            </layout:boundingBox>
+            <layout:curve>
+              <layout:listOfCurveSegments>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="517" layout:y="221" />
+                  <layout:end layout:x="544" layout:y="221" />
+                </layout:curveSegment>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="544" layout:y="221" />
+                  <layout:end layout:x="560" layout:y="221" />
+                </layout:curveSegment>
+              </layout:listOfCurveSegments>
+            </layout:curve>
+            <layout:listOfSpeciesReferenceGlyphs>
+              <layout:speciesReferenceGlyph layout:id="layout_92_substrate_0" layout:speciesGlyph="layout_93">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="517" layout:y="221" />
+                      <layout:end layout:x="487" layout:y="222" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_92_substrate_1" layout:speciesGlyph="layout_94">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="517" layout:y="221" />
+                      <layout:end layout:x="472" layout:y="249" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_92_substrate_2" layout:speciesGlyph="layout_95">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="517" layout:y="221" />
+                      <layout:end layout:x="476" layout:y="191" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_92_product_0" layout:speciesGlyph="layout_96">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="560" layout:y="221" />
+                      <layout:end layout:x="577" layout:y="221" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+            </layout:listOfSpeciesReferenceGlyphs>
+          </layout:reactionGlyph>
+          <layout:reactionGlyph layout:id="layout_300" layout:reaction="reaction_2470935">
+            <layout:boundingBox>
+              <layout:position layout:x="737" layout:y="215" />
+              <layout:dimensions layout:height="12" layout:width="12" />
+            </layout:boundingBox>
+            <layout:curve>
+              <layout:listOfCurveSegments>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="720" layout:y="221" />
+                  <layout:end layout:x="743" layout:y="221" />
+                </layout:curveSegment>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="743" layout:y="221" />
+                  <layout:end layout:x="760" layout:y="220" />
+                </layout:curveSegment>
+              </layout:listOfCurveSegments>
+            </layout:curve>
+            <layout:listOfSpeciesReferenceGlyphs>
+              <layout:speciesReferenceGlyph layout:id="layout_300_substrate_0" layout:speciesGlyph="layout_96">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="720" layout:y="221" />
+                      <layout:end layout:x="679" layout:y="221" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_300_substrate_1" layout:speciesGlyph="layout_301">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="720" layout:y="221" />
+                      <layout:end layout:x="660" layout:y="262" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_300_substrate_2" layout:speciesGlyph="layout_302">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="720" layout:y="221" />
+                      <layout:end layout:x="647" layout:y="179" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_300_product_0" layout:speciesGlyph="layout_270">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="760" layout:y="220" />
+                      <layout:end layout:x="778" layout:y="220" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+            </layout:listOfSpeciesReferenceGlyphs>
+          </layout:reactionGlyph>
+          <layout:reactionGlyph layout:id="layout_326" layout:reaction="reaction_156723">
+            <layout:boundingBox>
+              <layout:position layout:x="184" layout:y="120" />
+              <layout:dimensions layout:height="12" layout:width="12" />
+            </layout:boundingBox>
+            <layout:curve>
+              <layout:listOfCurveSegments>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="169" layout:y="125" />
+                  <layout:end layout:x="190" layout:y="126" />
+                </layout:curveSegment>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="190" layout:y="126" />
+                  <layout:end layout:x="227" layout:y="125" />
+                </layout:curveSegment>
+              </layout:listOfCurveSegments>
+            </layout:curve>
+            <layout:listOfSpeciesReferenceGlyphs>
+              <layout:speciesReferenceGlyph layout:id="layout_326_substrate_0" layout:speciesGlyph="layout_327">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="169" layout:y="125" />
+                      <layout:end layout:x="170" layout:y="99" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_326_substrate_1" layout:speciesGlyph="layout_328">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="169" layout:y="125" />
+                      <layout:end layout:x="148" layout:y="121" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_326_product_0" layout:speciesGlyph="layout_329">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="227" layout:y="125" />
+                      <layout:end layout:x="280" layout:y="115" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_326_product_1" layout:speciesGlyph="layout_330">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="227" layout:y="125" />
+                      <layout:end layout:x="228" layout:y="100" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_326_modifier_0" layout:speciesGlyph="layout_303">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="188" layout:y="177" />
+                      <layout:end layout:x="190" layout:y="126" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+            </layout:listOfSpeciesReferenceGlyphs>
+          </layout:reactionGlyph>
+          <layout:reactionGlyph layout:id="layout_331" layout:reaction="reaction_156673">
+            <layout:boundingBox>
+              <layout:position layout:x="296" layout:y="194" />
+              <layout:dimensions layout:height="12" layout:width="12" />
+            </layout:boundingBox>
+            <layout:curve>
+              <layout:listOfCurveSegments>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="305" layout:y="180" />
+                  <layout:end layout:x="302" layout:y="200" />
+                </layout:curveSegment>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="302" layout:y="200" />
+                  <layout:end layout:x="298" layout:y="225" />
+                </layout:curveSegment>
+              </layout:listOfCurveSegments>
+            </layout:curve>
+            <layout:listOfSpeciesReferenceGlyphs>
+              <layout:speciesReferenceGlyph layout:id="layout_331_substrate_0" layout:speciesGlyph="layout_332">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="305" layout:y="180" />
+                      <layout:end layout:x="340" layout:y="174" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_331_substrate_1" layout:speciesGlyph="layout_333">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="305" layout:y="180" />
+                      <layout:end layout:x="300" layout:y="167" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_331_product_0" layout:speciesGlyph="layout_334">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="298" layout:y="225" />
+                      <layout:end layout:x="302" layout:y="247" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_331_product_1" layout:speciesGlyph="layout_335">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="298" layout:y="225" />
+                      <layout:end layout:x="333" layout:y="223" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_331_modifier_0" layout:speciesGlyph="layout_303">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="243" layout:y="196" />
+                      <layout:end layout:x="302" layout:y="200" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+            </layout:listOfSpeciesReferenceGlyphs>
+          </layout:reactionGlyph>
+        </layout:listOfReactionGlyphs>
+        <layout:listOfTextGlyphs>
+          <layout:textGlyph layout:graphicalObject="layout_240" layout:id="text_layout_240" layout:text="nucleoplasm">
+            <layout:boundingBox>
+              <layout:position layout:x="154" layout:y="391" />
+              <layout:dimensions layout:height="33" layout:width="99" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_93" layout:id="text_layout_93" layout:text="WAPAL">
+            <layout:boundingBox>
+              <layout:position layout:x="431" layout:y="213" />
+              <layout:dimensions layout:height="21" layout:width="49" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_94" layout:id="text_layout_94" layout:text="PDS5">
+            <layout:boundingBox>
+              <layout:position layout:x="436" layout:y="256" />
+              <layout:dimensions layout:height="21" layout:width="41" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_95" layout:id="text_layout_95" layout:text="Cohesin Complex">
+            <layout:boundingBox>
+              <layout:position layout:x="406" layout:y="167" />
+              <layout:dimensions layout:height="21" layout:width="114" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_96" layout:id="text_layout_96" layout:text="Cohesin:PDS5:WAPAL">
+            <layout:boundingBox>
+              <layout:position layout:x="585" layout:y="204" />
+              <layout:dimensions layout:height="35" layout:width="86" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_270" layout:id="text_layout_270" layout:text="Cohesin:PDS5:WAPAL:NIPBL:MAU2:Chromatin">
+            <layout:boundingBox>
+              <layout:position layout:x="785" layout:y="196" />
+              <layout:dimensions layout:height="49" layout:width="111" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_301" layout:id="text_layout_301" layout:text="Chromatin">
+            <layout:boundingBox>
+              <layout:position layout:x="611" layout:y="268" />
+              <layout:dimensions layout:height="21" layout:width="72" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_302" layout:id="text_layout_302" layout:text="NIPBL:MAU2">
+            <layout:boundingBox>
+              <layout:position layout:x="589" layout:y="155" />
+              <layout:dimensions layout:height="21" layout:width="81" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_303" layout:id="text_layout_303" layout:text="p-T210-PLK1">
+            <layout:boundingBox>
+              <layout:position layout:x="146" layout:y="182" />
+              <layout:dimensions layout:height="21" layout:width="84" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_327" layout:id="text_layout_327" layout:text="ATP">
+            <layout:boundingBox>
+              <layout:position layout:x="155" layout:y="70" />
+              <layout:dimensions layout:height="21" layout:width="31" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_328" layout:id="text_layout_328" layout:text="KIF20A">
+            <layout:boundingBox>
+              <layout:position layout:x="95" layout:y="107" />
+              <layout:dimensions layout:height="21" layout:width="49" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_329" layout:id="text_layout_329" layout:text="p-S528-KIF20A">
+            <layout:boundingBox>
+              <layout:position layout:x="276" layout:y="90" />
+              <layout:dimensions layout:height="21" layout:width="97" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_330" layout:id="text_layout_330" layout:text="ADP">
+            <layout:boundingBox>
+              <layout:position layout:x="214" layout:y="71" />
+              <layout:dimensions layout:height="21" layout:width="33" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_332" layout:id="text_layout_332" layout:text="ATP">
+            <layout:boundingBox>
+              <layout:position layout:x="347" layout:y="160" />
+              <layout:dimensions layout:height="21" layout:width="31" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_333" layout:id="text_layout_333" layout:text="KIF23">
+            <layout:boundingBox>
+              <layout:position layout:x="276" layout:y="142" />
+              <layout:dimensions layout:height="21" layout:width="41" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_334" layout:id="text_layout_334" layout:text="p-S911,S912-KIF23">
+            <layout:boundingBox>
+              <layout:position layout:x="242" layout:y="255" />
+              <layout:dimensions layout:height="21" layout:width="125" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_335" layout:id="text_layout_335" layout:text="ADP">
+            <layout:boundingBox>
+              <layout:position layout:x="340" layout:y="212" />
+              <layout:dimensions layout:height="21" layout:width="33" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+        </layout:listOfTextGlyphs>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <listOfCompartments>
+      <compartment constant="true" id="compartment_7660" metaid="metaid_2" name="nucleoplasm" sboTerm="SBO:0000290">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/GO:0005654" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+      <compartment constant="true" id="compartment_1598585" metaid="metaid_6" name="chromosome" sboTerm="SBO:0000290">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/GO:0005694" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_2537688" metaid="metaid_1" name="Cohesin:PDS5:WAPAL:NIPBL:MAU2:Chromatin [nucleoplasm]" sboTerm="SBO:0000289">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome DefinedSet. This is a list of alternative entities, any of which can perform the given function</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2537688" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NTI5" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q6KC79" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q8N3U4" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q7Z5K2" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O60216" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9Y6X3" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q29RF7" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9UQE7" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q14683" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q8WVM7" />
+                </rdf:Bag>
+              </bqbiol:hasPart>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-2537688" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-2537688" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_1641505" metaid="metaid_3" name="Cohesin Complex [nucleoplasm]" sboTerm="SBO:0000297">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q8N3U4, O60216, Q9UQE7, Q14683, Q8WVM7). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-1641505" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q8N3U4" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O60216" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9UQE7" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q14683" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q8WVM7" />
+                </rdf:Bag>
+              </bqbiol:hasPart>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-1641505" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-1641505" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_156695" metaid="metaid_4" name="p-S911,S912-KIF23 [nucleoplasm]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q02241" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156695" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://www.ebi.ac.uk/ols4/ontologies/mod/terms?obo_id=MOD:00046" />
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-156695" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-156695" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_1598585" constant="false" hasOnlySubstanceUnits="false" id="species_2537690" metaid="metaid_5" name="Chromatin [chromosome]" sboTerm="SBO:0000289">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome DefinedSet. This is a list of alternative entities, any of which can perform the given function</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-2537690" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_2466355" metaid="metaid_7" name="WAPAL [nucleoplasm]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_7">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q7Z5K2" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2466355" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-2466355" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-2466355" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_29358" metaid="metaid_8" name="ATP [nucleoplasm]" sboTerm="SBO:0000247">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome SimpleEntity. This is a small compound</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_8">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30616" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-29358" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_3002800" metaid="metaid_9" name="p-T210-PLK1 [nucleoplasm]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P53350" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-3002800" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://www.ebi.ac.uk/ols4/ontologies/mod/terms?obo_id=MOD:00047" />
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-3002800" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-PFA-3002800" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_156685" metaid="metaid_10" name="p-S528-KIF20A [nucleoplasm]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O95235" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156685" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://www.ebi.ac.uk/ols4/ontologies/mod/terms?obo_id=MOD:00046" />
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-156685" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-156685" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_2470930" metaid="metaid_11" name="NIPBL:MAU2 [nucleoplasm]" sboTerm="SBO:0000297">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q6KC79, Q9Y6X3). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2470930" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q6KC79" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9Y6X3" />
+                </rdf:Bag>
+              </bqbiol:hasPart>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-2470930" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-2470930" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_156721" metaid="metaid_12" name="KIF20A [nucleoplasm]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O95235" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156721" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-156721" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-156721" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_2468044" metaid="metaid_13" name="PDS5 [nucleoplasm]" sboTerm="SBO:0000289">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome DefinedSet. This is a list of alternative entities, any of which can perform the given function</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2468044" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NTI5" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q29RF7" />
+                </rdf:Bag>
+              </bqbiol:hasPart>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-2468044" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-2468043" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-2468043" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-2468043" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-2468043" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-2468043" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_2468042" metaid="metaid_14" name="Cohesin:PDS5:WAPAL [nucleoplasm]" sboTerm="SBO:0000297">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q9NTI5, Q8N3U4, Q7Z5K2, O60216, Q29RF7, Q9UQE7, Q14683, Q8WVM7). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2468042" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NTI5" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q8N3U4" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q7Z5K2" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O60216" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q29RF7" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9UQE7" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q14683" />
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q8WVM7" />
+                </rdf:Bag>
+              </bqbiol:hasPart>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-2468042" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-2468042" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_156709" metaid="metaid_15" name="KIF23 [nucleoplasm]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q02241" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156709" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-156709" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-156709" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="compartment_7660" constant="false" hasOnlySubstanceUnits="false" id="species_113582" metaid="metaid_16" name="ADP [nucleoplasm]" sboTerm="SBO:0000247">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome SimpleEntity. This is a small compound</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:456216" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-113582" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction compartment="compartment_7660" fast="false" id="reaction_2468040" metaid="metaid_17" name="Cohesin binds PDS5 and WAPAL" reversible="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">WAPAL (WAPL) and PDS5 proteins (PDS5A and/or PDS5B) are associated with cohesin throughout most of the cell cycle (Kueng et al. 2006, Gandhi et al. 2006). FGF motifs present in the N-terminal region of WAPAL participate in WAPAL binding to PDS5 and cohesin subunits RAD21, STAG1 (SA1) and STAG2 (SA2) (Shintomi and Hirano 2009).</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Orlic-Milacic</vCard:Family>
+                      <vCard:Given>Marija</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Orlic-Milacic</vCard:Family>
+                      <vCard:Given>Marija</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Weiser</vCard:Family>
+                      <vCard:Given>Joel</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2012-09-14T00:28:10Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2026-03-16T14:04:25Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2012-10-02T17:49:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2468040" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:19696148" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17113138" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17112726" />
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2468040" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="true" id="speciesreference_2468040_input_1641505" sboTerm="SBO:0000010" species="species_1641505" stoichiometry="1" />
+          <speciesReference constant="true" id="speciesreference_2468040_input_2468044" sboTerm="SBO:0000010" species="species_2468044" stoichiometry="1" />
+          <speciesReference constant="true" id="speciesreference_2468040_input_2466355" sboTerm="SBO:0000010" species="species_2466355" stoichiometry="1" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" id="speciesreference_2468040_output_2468042" sboTerm="SBO:0000011" species="species_2468042" stoichiometry="1" />
+        </listOfProducts>
+      </reaction>
+      <reaction compartment="compartment_7660" fast="false" id="reaction_156673" metaid="metaid_18" name="Regulation of KIF23 (MKLP1) by phosphorylation" reversible="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">The polo-like kinase PLK1 phosphorylates KIF23 (also known as MKLP1 i.e. mitotic kinesin-like protein 1) on serine residues S911 and S912.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_18">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Gillespie</vCard:Family>
+                      <vCard:Given>Marc E</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Weiser</vCard:Family>
+                      <vCard:Given>Joel</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2004-12-09T07:18:13Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2026-03-16T14:04:25Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156673" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:15199097" />
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156673" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/GO:0004674" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.1" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.28" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.29" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.3" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.9" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="true" id="speciesreference_156673_input_29358" sboTerm="SBO:0000010" species="species_29358" stoichiometry="2" />
+          <speciesReference constant="true" id="speciesreference_156673_input_156709" sboTerm="SBO:0000010" species="species_156709" stoichiometry="1" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" id="speciesreference_156673_output_156695" sboTerm="SBO:0000011" species="species_156695" stoichiometry="1" />
+          <speciesReference constant="true" id="speciesreference_156673_output_113582" sboTerm="SBO:0000011" species="species_113582" stoichiometry="2" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference id="modifierspeciesreference_156673_catalyst_3002800" sboTerm="SBO:0000013" species="species_3002800" />
+        </listOfModifiers>
+      </reaction>
+      <reaction compartment="compartment_1598585" fast="false" id="reaction_2470935" metaid="metaid_19" name="Cohesin binding to decondensed chromatin is facilitated by NIPBL:MAU2" reversible="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Cohesin, in complex with WAPAL and PDS5 (PDS5A or PDS5B) binds decondensed chromatin in telophase (Kueng et al. 2006). This binding is facilitated by the NIPBL:MAU2 complex, also known as the 'cohesin loading complex'. NIPBL:MAU2 complex is associated with chromatin from telophase until prophase (Watrin et al. 2006) but seems to form a transient rather than stable complex with cohesin.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Orlic-Milacic</vCard:Family>
+                      <vCard:Given>Marija</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Orlic-Milacic</vCard:Family>
+                      <vCard:Given>Marija</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Weiser</vCard:Family>
+                      <vCard:Given>Joel</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2012-09-20T19:57:29Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2026-03-16T14:04:25Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2012-10-02T17:49:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2470935" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17113138" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:16682347" />
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-2470935" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="true" id="speciesreference_2470935_input_2537690" sboTerm="SBO:0000010" species="species_2537690" stoichiometry="1" />
+          <speciesReference constant="true" id="speciesreference_2470935_input_2470930" sboTerm="SBO:0000010" species="species_2470930" stoichiometry="2" />
+          <speciesReference constant="true" id="speciesreference_2470935_input_2468042" sboTerm="SBO:0000010" species="species_2468042" stoichiometry="2" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" id="speciesreference_2470935_output_2537688" sboTerm="SBO:0000011" species="species_2537688" stoichiometry="1" />
+        </listOfProducts>
+      </reaction>
+      <reaction compartment="compartment_7660" fast="false" id="reaction_156723" metaid="metaid_20" name="Regulation of KIF20A (MKL2) by phosphorylation" reversible="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">The polo-like kinase PLK1 phosphorylates KIF20A (also known as MKLP2 i.e. mitotic kinesin-like protein 2) on serine residue S528.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Gillespie</vCard:Family>
+                      <vCard:Given>Marc E</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Weiser</vCard:Family>
+                      <vCard:Given>Joel</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2004-12-09T07:18:13Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2026-03-16T14:04:25Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156723" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:12939256" />
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-156723" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/GO:0004674" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.1" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.28" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.29" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.3" />
+                  <rdf:li rdf:resource="https://identifiers.org/ec-code:2.7.11.9" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="true" id="speciesreference_156723_input_156721" sboTerm="SBO:0000010" species="species_156721" stoichiometry="1" />
+          <speciesReference constant="true" id="speciesreference_156723_input_29358" sboTerm="SBO:0000010" species="species_29358" stoichiometry="1" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" id="speciesreference_156723_output_156685" sboTerm="SBO:0000011" species="species_156685" stoichiometry="1" />
+          <speciesReference constant="true" id="speciesreference_156723_output_113582" sboTerm="SBO:0000011" species="species_113582" stoichiometry="1" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference id="modifierspeciesreference_156723_catalyst_3002800" sboTerm="SBO:0000013" species="species_3002800" />
+        </listOfModifiers>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

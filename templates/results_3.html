@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+{% block title %}Homolog Protein Function — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Homolog Protein Function</h1>
+    <p>
+        Here we summarize what the <strong><em>FOXJ1</em></strong> protein does in the cell, how it regulates transcription and cilia-related programs, and how those roles are described in functional databases and the literature.
+    </p>
+</div>
+
+<nav class="results-nav">
+    <a href="{{ url_for('results_page', page_num=1) }}">Finding the Homolog</a>
+    <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene</a>
+    <a href="{{ url_for('results_page', page_num=3) }}" class="active">Homolog Protein Function</a>
+    <a href="{{ url_for('results_page', page_num=4) }}">Homolog Structure</a>
+    <a href="{{ url_for('results_page', page_num=5) }}">Future Work</a>
+</nav>
+
+<section class="content-section">
+
+    <h2>Major functions of FOXJ1</h2>
+
+    <ol>
+        <li>
+            <strong>Master transcription factor for motile cilia formation</strong><br>
+            FOXJ1 is the main regulator of motile cilia formation in humans. It binds to promoters of ciliary genes and turns on their transcription. This allows cells to produce the proteins needed to build motile cilia <a href="#ref-27" class="ref-callout">[27]</a><a href="#ref-21" class="ref-callout">[21]</a>.
+        </li>
+        <li>
+            <strong>Sequence-specific DNA binding through the forkhead domain</strong><br>
+            FOXJ1 binds DNA through its forkhead DNA-binding domain. This domain recognizes specific DNA sequences, including 5&prime;-HWDTGTTTGTTTA-3&prime; and 5&prime;-KTTTGTTGTTKTW-3&prime;. The recognition helix H3 goes into the major groove of the DNA and makes direct contact with the TGTTT core. The wing loops then help keep the whole complex stable through interactions with the backbone phosphate groups <a href="#ref-2" class="ref-callout">[2]</a>.
+        </li>
+        <li>
+            <strong>RNA polymerase II-specific transcription activation</strong><br>
+            After FOXJ1 binds DNA, it activates transcription through acidic activation regions A1&ndash;A4 and a proline-rich region. These regions help recruit RNA polymerase II and co-activators to ciliary gene promoters <a href="#ref-10" class="ref-callout">[10]</a>.
+        </li>
+        <li>
+            <strong>Ciliary basal body organization</strong><br>
+            FOXJ1 controls the transcription of genes needed to build and correctly place basal bodies. Basal bodies are modified centrioles that anchor each cilium at the top surface of the cell. When FOXJ1 is lost in animals, the basal bodies end up in the wrong place and cilia do not form <a href="#ref-5" class="ref-callout">[5]</a>.
+        </li>
+        <li>
+            <strong>Axoneme assembly</strong><br>
+            FOXJ1 turns on genes that code for the structural parts of the axoneme, which is the microtubule-based skeleton inside each cilium. These include proteins for the outer and inner dynein arms, radial spoke proteins, and the central pair components. Together these proteins form the 9+2 microtubule structure that allows the cilium to beat using ATP <a href="#ref-18" class="ref-callout">[18]</a>.
+        </li>
+        <li>
+            <strong>Motile cilium assembly</strong><br>
+            FOXJ1 helps cells build motile cilia rather than primary sensory cilia. It activates genes specific to motile cilia, including genes for dynein arms and the central pair apparatus <a href="#ref-24" class="ref-callout">[24]</a>.
+        </li>
+        <li>
+            <strong>Determination of left-right body symmetry</strong><br>
+            During embryo development, FOXJ1 is expressed in the monociliated cells of the embryonic node. The beating cilia there create a directional fluid flow that sets the left-right body axis. When FOXJ1 does not work properly, organ positioning becomes random. This shows up in patients with primary ciliary dyskinesia type 43 as situs inversus totalis or situs ambiguus <a href="#ref-25" class="ref-callout">[25]</a>.
+        </li>
+        <li>
+            <strong>Lung epithelium development and mucociliary differentiation</strong><br>
+            In the developing human lung, FOXJ1 is expressed in airway epithelial progenitor cells just before cilia appear. It drives these cells to become mature multiciliated cells. Each of these cells carries hundreds of motile cilia and is responsible for clearing mucus and inhaled pathogens out of the airways. Patients who lack FOXJ1 develop chronic progressive lung disease because this clearance system does not work <a href="#ref-4" class="ref-callout">[4]</a>.
+        </li>
+        <li>
+            <strong>Brain and ventricular development through ependymal ciliation</strong><br>
+            FOXJ1 is strongly expressed in the ependymal cells that line the brain ventricles and the choroid plexus. These cells carry motile cilia that move cerebrospinal fluid through the ventricular system. When FOXJ1 is not working in humans, CSF builds up abnormally and often needs surgical shunting in infancy <a href="#ref-25" class="ref-callout">[25]</a>.
+        </li>
+        <li>
+            <strong>Actin cytoskeleton organization for basal body docking</strong><br>
+            FOXJ1 is linked to actin cytoskeleton organization near the apical surface of the cell. This helps basal bodies dock and anchor before cilia grow out, connecting FOXJ1&rsquo;s transcriptional role to the physical changes needed for multiciliated cell formation <a href="#ref-18" class="ref-callout">[18]</a>.
+        </li>
+    </ol>
+
+    <h2>Two most important functions of FOXJ1</h2>
+
+    <h3>Function I — Master regulator of motile ciliogenesis</h3>
+    <p>
+        FOXJ1 is considered a master regulator of motile ciliogenesis because it acts early in the cilia-building pathway. This figure B1 shows how FOXJ1 functions as a transcription factor during motile ciliogenesis. After FOXJ1 is activated, it produces FOXJ1 protein, which enters the nucleus and binds to cilia-related genes. FOXJ1 activates genes involved in axoneme assembly, basal body docking, intraflagellar transport, and motility structures such as dynein arms and radial spokes. These target genes produce cilia proteins that help centrioles migrate to the apical surface, dock as basal bodies, and form the 9+2 motile cilia structure.
+    </p>
+
+    <div class="figure figure--image" id="figure-b1">
+        <img src="{{ url_for('static', filename='images/protein_functions/function.png') }}" width="900" alt="Diagram of FOXJ1-driven motile ciliogenesis in human ciliated epithelial cells" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure B1. FOXJ1-driven motile ciliogenesis in human ciliated epithelial cells, from upstream signalling through nuclear activation, target gene induction, and 9+2 axoneme assembly. Adapted from <a href="#ref-27" class="ref-callout">[27]</a> and <a href="#ref-18" class="ref-callout">[18]</a>.
+        </div>
+    </div>
+
+    <p>
+        When FOXJ1 is disrupted, motile cilia cannot form or function properly, which can lead to serious health problems. Wallmeier et al. <a href="#ref-25" class="ref-callout">[25]</a> reported six unrelated individuals with faulty FOXJ1 copies who developed primary ciliary dyskinesia type 43. These patients showed symptoms such as hydrocephalus, chronic lung disease, and abnormal left-right organ positioning. Therefore, FOXJ1 is important to produce and keep the motile cilia active.
+    </p>
+
+    <h3>Function II &mdash; Forkhead DNA binding and RFX3 co-regulation</h3>
+    <p>
+        FOXJ1 works through two major pathways to control cilia formation. In the first pathway, FOXJ1 uses its forkhead domain, located around residues 120&ndash;210, to bind DNA. This domain folds into a winged-helix shape, and one helix called H3 inserts into the major groove of DNA to recognize the sequence 5&prime;-HWDTGTTTGTTTA-3&prime;. Two flexible wing loops help stabilize the connection between FOXJ1 and DNA. Once bound, FOXJ1 uses its four acidic activation regions, A1 to A4, along with a proline-rich region, to recruit the transcription machinery and switch on ciliary genes <a href="#ref-2" class="ref-callout">[2]</a><a href="#ref-27" class="ref-callout">[27]</a>. Closely related proteins FoxJ2 and FoxJ3 share a similar forkhead domain but are missing the A1, A2, and A4 activation regions, so they cannot activate the same ciliary genes, which shows that both DNA binding and activation are needed for FOXJ1 to do its job <a href="#ref-27" class="ref-callout">[27]</a>.
+    </p>
+    <p>
+        In the second pathway, FOXJ1 works together with a protein called RFX3 in the human airway. FOXJ1 acts first by turning on RFX3 expression, but RFX3 cannot turn on FOXJ1 in return, so FOXJ1 is always at the top of this regulatory chain <a href="#ref-10" class="ref-callout">[10]</a>. Once both proteins are present, they bind to the same ciliary gene promoters together and produce enough transcriptional activity to convert basal progenitor cells into fully ciliated cells <a href="#ref-4" class="ref-callout">[4]</a><a href="#ref-19" class="ref-callout">[19]</a>.
+    </p>
+
+    <hr>
+    <h2>Biochemical pathways</h2>
+
+    <ol>
+        <li>Mitotic G2-G2/M phases</li>
+        <li>Mitotic Prometaphase (<a href="https://reactome.org/PathwayBrowser/#/R-HSA-68877">R-HSA-68877</a>)</li>
+        <li>Regulation of mitotic cell cycle</li>
+        <li>Mitotic Telophase/Cytokinesis (<a href="https://reactome.org/PathwayBrowser/#/R-HSA-68884">R-HSA-68884</a>)</li>
+        <li>Mitotic Metaphase and Anaphase</li>
+        <li>Mitotic Prophase</li>
+        <li>ESR-mediated signalling</li>
+        <li>TCF-dependent signalling in response to WNT</li>
+        <li>Mitotic G1 phase and G1/S transition</li>
+        <li>NoRC negatively regulates rRNA expression</li>
+    </ol>
+
+    <h3>Mitotic telophase / cytokinesis (Reactome <a href="https://reactome.org/PathwayBrowser/#/R-HSA-68884">R-HSA-68884</a>)</h3>
+    <p>
+        Telophase is the last stage of cell division before two daughter cells fully separate. During this stage, the cell breaks down the mitotic machinery, rebuilds the nuclear envelope around each set of chromosomes, organizes the remaining microtubules at the center, and then separates through cytokinesis. A protein called PLK1 stays active through this whole process, coordinating the final separation and making sure the two daughter cells divide cleanly (Reactome <a href="https://reactome.org/PathwayBrowser/#/R-HSA-68884">R-HSA-68884</a>).
+    </p>
+    <p>
+        FOXJ1 does not directly control cell division. Its connection to this pathway is through the centriole. Centrioles are copied during cell division, and after division ends, they can be reused as basal bodies, which anchor motile cilia. Once the cell exits the cell cycle, FOXJ1 becomes active and starts the cilia-building program. Telophase and cytokinesis mark the end of division, and FOXJ1 activity marks the beginning of what comes next: the change from a dividing cell into a mature, ciliated one <a href="#ref-18" class="ref-callout">[18]</a>.
+    </p>
+
+    <div
+        class="sbml-pathway-panel"
+        data-sbml-layout-url="{{ url_for('static', filename='images/protein_functions/functional_structural/telop_1.sbml') }}"
+        data-sbml-title="Mitotic Telophase / Cytokinesis (R-HSA-68884)"
+        data-sbml-title-url="https://reactome.org/PathwayBrowser/#/R-HSA-68884&amp;SEL=R-HSA-2468042"
+        role="region"
+        aria-label="Interactive SBML pathway diagram telophase"
+    ></div>
+    <p class="note muted">Click on the title of the figure to be redirected to the Reactome pathway.</p>
+
+    <h3>Mitotic Prometaphase (Reactome R-HSA-68877)</h3>
+    <p>
+        Prometaphase is the stage of cell division where the nuclear envelope breaks down, the spindle microtubules reach in and grab onto the chromosomes at structures called kinetochores, and a quality-control system checks that every chromosome is correctly attached before allowing division to proceed. Two key proteins, Aurora B and PLK1, act as the error-correction team during this process (Reactome R-HSA-68877). FOXJ1 appears in this pathway not because it drives any of these division events directly, but because it shows up in protein interaction screens alongside PLK1 at the centrosome, the same structure that once cell division is over gets repurposed into the basal body from which motile cilia grow. So just as with telophase, the connection between FOXJ1 and prometaphase is really a story about the centriole: division uses it to organise the spindle, and after division is done, FOXJ1 takes over and uses it as the foundation for building a cilium <a href="#ref-18" class="ref-callout">[18]</a>.
+    </p>
+
+    <div
+        class="sbml-pathway-panel sbml-pathway-panel--prom"
+        data-sbml-layout-url="{{ url_for('static', filename='images/protein_functions/functional_structural/prom_2.sbml') }}"
+        data-sbml-title="Mitotic Prometaphase (R-HSA-68877)"
+        data-sbml-title-url="https://reactome.org/PathwayBrowser/#/R-HSA-68877"
+        role="region"
+        aria-label="Interactive SBML pathway diagram prometaphase"
+    ></div>
+    <p class="note muted">Click on the title of the figure to be redirected to the Reactome pathway.</p>
+
+    <hr>
+    <h2>FOXJ1 protein isoforms</h2>
+    <p>
+        The human FOXJ1 gene produces two transcripts. Isoform 1 (NM_001454.4 / NP_001445.2) is the MANE Select transcript, meaning it is experimentally confirmed, and it encodes a protein of 421 amino acids. Isoform 2 (XM_047435666.1 / XP_047291622.1) is a computationally predicted transcript that also encodes a 421 amino acid protein. Because both isoforms produce proteins of exactly the same length and domain architecture, they are functionally equivalent and expected to behave identically inside the cell. No isoform-specific antibodies or proteomics tools currently exist to tell them apart in tissue samples, so all expression data applies equally to both isoforms <a href="#ref-19" class="ref-callout">[19]</a>.
+    </p>
+
+    <div class="isoforms-card">
+        <figure class="isoforms-shot-block">
+            <figcaption class="isoforms-shot-cap">
+                Screenshot of NCBI Gene (Transcripts and Products).
+            </figcaption>
+            <div class="isoforms-shot-window">
+                <img src="{{ url_for('static', filename='images/protein_functions/isoform.png') }}" alt="NCBI Gene FOXJ1 page showing NM_001454.4 and XM_047435666.1 transcript rows" loading="lazy" decoding="async" class="isoforms-shot-img">
+            </div>
+        </figure>
+    </div>
+
+    <hr>
+    <h2>Tissue-specific expression</h2>
+    <p>
+        According to the Human Protein Atlas, FOXJ1 protein expression is only seen in a limited group of tissues. Most of these tissues contain motile ciliated cells. The highest expression is seen in the bronchial mucosa, endometrium, and fallopian tube. Medium expression is seen in the nasopharynx, efferent ducts, and choroid plexus. Low expression is seen in the testis and cerebral cortex. Most other tissues such as the liver, skeletal muscle, skin, bone marrow, spleen, and lymph node, do not show detectable FOXJ1 protein expression as these tissues usually do not contain motile cilia. The full tissue expression figures and Human Protein Atlas screenshots are on the <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene page</a>. 
+    </p>
+    <table class="data-table">
+        <thead>
+            <tr><th>Rank</th><th>Tissue</th><th>Relative signal</th><th>Isoform applicability</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Bronchial mucosa</td><td>High</td><td>Both (identical CDS)</td></tr>
+            <tr><td>2</td><td>Endometrium</td><td>High</td><td>Both</td></tr>
+            <tr><td>3</td><td>Fallopian tube</td><td>High</td><td>Both</td></tr>
+            <tr><td>4</td><td>Nasopharynx</td><td>Medium</td><td>Both</td></tr>
+            <tr><td>5</td><td>Efferent ducts</td><td>Medium</td><td>Both</td></tr>
+            <tr><td>6</td><td>Choroid plexus</td><td>Medium</td><td>Both</td></tr>
+            <tr><td>7</td><td>Testis</td><td>Low to medium</td><td>Both</td></tr>
+            <tr><td>8</td><td>Cerebral cortex</td><td>Low</td><td>Both</td></tr>
+            <tr><td>9</td><td>Cerebellum</td><td>Trace</td><td>Both</td></tr>
+            <tr><td>10</td><td>Hippocampus</td><td>Trace</td><td>Both</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <h2>Developmental stages</h2>
+    <p>
+        Using the Expression Atlas developmental RNA survey for FOXJ1, expression is seen across many stages of human life, from early embryo to elderly. FOXJ1 expression appears as early as 4 weeks post-conception and continues through many prenatal stages, including weeks 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 18, and 19 post-conception. This early expression is important because FOXJ1 is needed during development. It helps establish left-right body patterning at the embryonic node and helps developing lung cells become ciliated cells <a href="#ref-4" class="ref-callout">[4]</a>. FOXJ1 expression continues after birth through fetal, neonatal, infant, child, adolescent, adult, and elderly stages. This shows that FOXJ1 is not only important during early development, but also needed throughout life to maintain ciliated cell populations. The full developmental expression data, heatmap, stage-by-stage breakdown, and discussion of how the expression pattern connects to FOXJ1 function are all on the <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene page</a>.
+    </p>
+    <table class="data-table">
+        <thead>
+            <tr><th>Stage window</th><th>Typical FOXJ1 signal</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>4–9 weeks post-conception</td><td>Low to medium (embryonic node, early organ rudiments)</td></tr>
+            <tr><td>10–19 weeks post-conception</td><td>Medium to high (developing lung, kidney, CNS ependymal cells)</td></tr>
+            <tr><td>Fetal</td><td>Medium to high</td></tr>
+            <tr><td>Neonate / infant / toddler</td><td>Medium</td></tr>
+            <tr><td>School-age child / juvenile / adolescent</td><td>Medium</td></tr>
+            <tr><td>Young adult / middle adult</td><td>Medium to high</td></tr>
+            <tr><td>Elderly</td><td>Low to medium</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <h2>Subcellular localization</h2>
+    <p>
+        Two databases show that FOXJ1 is mainly located in the nucleus. UniProtKB/Swiss-Prot identifies FOXJ1 as a nuclear protein, and the COMPARTMENTS database also gives the nucleus the highest confidence score, 5 out of 5. This is coherent with FOXJ1&rsquo;s role as a transcription factor. To control gene expression, FOXJ1 has to be in the nucleus, where it can bind DNA and turn on target genes.
+    </p>
+    <p>
+        Other locations, such as the endoplasmic reticulum, mitochondrion, cytoskeleton, and plasma membrane, are also listed in COMPARTMENTS, but they have low scores of 1 or 2 out of 5. These are computational predictions rather than experimentally confirmed.
+    </p>
+    <p>
+        Overall, FOXJ1&rsquo;s nuclear localization is important because it can only activate its ciliary target genes when it is inside the nucleus <a href="#ref-25" class="ref-callout">[25]</a><a href="#ref-21" class="ref-callout">[21]</a>.
+    </p>
+
+    <div class="figure figure--pair figure--image">
+        <div class="figure--pair__grid">
+            <figure class="figure--pair__cell">
+                <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/subcell_1.png') }}" width="620" alt="COMPARTMENTS database nuclear score for FOXJ1" loading="lazy" decoding="async">
+                <span class="figure--pair__label">Image f.1 — COMPARTMENTS (GeneCards)</span>
+            </figure>
+            <figure class="figure--pair__cell">
+                <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/subcell_2.png') }}" width="620" alt="UniProt subcellular location for FOXJ1" loading="lazy" decoding="async">
+                <span class="figure--pair__label">Image f.2 — UniProt Swiss-Prot curated view</span>
+            </figure>
+        </div>
+        <div class="figure-caption">Figure F. Nuclear localization confirmed by two independent databases for both FOXJ1 isoforms.</div>
+    </div>
+
+    <hr>
+    <h2>Protein interactions with FOXJ1</h2>
+
+    <ol>
+        <li>
+            <strong>CFAP20</strong><br>
+            CFAP20 is the strongest interactor, supported across the most databases. It is a structural protein that sits inside the ciliary axoneme and its production depends directly on FOXJ1. This makes CFAP20 a good example of how FOXJ1 works, because FOXJ1 does not just switch the gene on but also physically connects to the protein that gets built as a result.
+        </li>
+        <li>
+            <strong>RFX3</strong><br>
+            RFX3 is FOXJ1's most important co-regulator in human airway cells. FOXJ1 switches RFX3 on, and once RFX3 is produced, the two proteins work side by side on the same ciliary gene promoters to drive stronger activation than either could manage alone. RFX3 cannot switch FOXJ1 on in return, so the relationship only runs one way.
+        </li>
+        <li>
+            <strong>RFX1</strong><br>
+            RFX1 works alongside FOXJ1 at overlapping ciliary gene promoters across multiple ciliated tissues. It contributes to fine-tuning of the ciliogenic gene program in different cell types.
+        </li>
+        <li>
+            <strong>RFX2</strong><br>
+            RFX2 has the highest STRING interaction score of all FOXJ1 neighbours at around 0.96, making it the most confidently predicted functional partner. It is particularly active in the testis and bronchial epithelium, where it helps FOXJ1 regulate sperm flagella and airway cilia.
+        </li>
+        <li>
+            <strong>IFT88</strong><br>
+            IFT88 is a core part of the intraflagellar transport machinery that physically carries ciliary proteins from the base of the cilium to the growing tip. Without IFT88, none of the structural proteins that FOXJ1 transcribes could reach the axoneme, making it an essential delivery system for everything FOXJ1 builds.
+        </li>
+        </ol>
+    
+        <div class="figure figure--image figure--diagram-fill" id="figure-g1">
+            <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/ppin.png') }}" alt="Human Protein Atlas protein interaction results for FOXJ1" loading="lazy" decoding="async">
+            <div class="figure-caption">Figure G1. Protein interaction network for FOXJ1 from the Human Protein Atlas.</div>
+        </div>
+    
+        <div class="figure figure--image figure--diagram-fill" id="figure-g2">
+            <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/string.png') }}" alt="STRING network FOXJ1 first shell" loading="lazy" decoding="async">
+            <div class="figure-caption">Figure G2. STRING v12 first-shell interaction network for FOXJ1.</div>
+        </div>
+    
+        <h2>References</h2>
+        <ol class="references-list">
+            <li id="ref-2" value="2">Arora S., Nagarkar P., D&rsquo;Souza J.S. (2025). Recombinant human FOXJ1 protein binds DNA, forms higher-order oligomers, has gel-shifting domains and contains intrinsically disordered regions. <em>Protein Expr. Purif.</em> 227:106622. <a href="https://doi.org/10.1016/j.pep.2024.106622" target="_blank">doi:10.1016/j.pep.2024.106622</a>.</li>
+            <li id="ref-4" value="4">Blatt E.N., Yan X.H., Wuerker R.B., <em>et al.</em> (1999). Forkhead transcription factor HFH-4 expression is temporally related to epithelial mucociliary differentiation. <em>Am. J. Respir. Cell Mol. Biol.</em> 21(2):168–176. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/10423398/" target="_blank">10423398</a>.</li>
+            <li id="ref-5" value="5">Brody S.L., Yan X.H., Wuerker R.B., <em>et al.</em> (2000). Ciliogenesis and left-right axis defects in forkhead factor HFH-4-null mice. <em>Am. J. Respir. Cell Mol. Biol.</em> 23(1):45–51. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/10873152/" target="_blank">10873152</a>.</li>
+            <li id="ref-10" value="10">Didon L., Zwick R.K., Chao I.W., <em>et al.</em> (2013). RFX3 modulation of FOXJ1 regulation of cilia genes in the human airway epithelium. <em>Respir. Res.</em> 14:70. <a href="https://doi.org/10.1186/1465-9921-14-70" target="_blank">doi:10.1186/1465-9921-14-70</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3710277/" target="_blank">PMC3710277</a>.</li>
+            <li id="ref-18" value="18">Mukherjee I., Roy S., Chakrabarti S. (2019). Identification of important effector proteins in the FOXJ1 transcriptional network associated with ciliogenesis and ciliary function. <em>Front. Genet.</em> 10:23. <a href="https://doi.org/10.3389/fgene.2019.00023" target="_blank">doi:10.3389/fgene.2019.00023</a>.</li>
+            <li id="ref-19" value="19">NCBI Resource Coordinators (2018). Database resources of the National Center for Biotechnology Information. <em>Nucleic Acids Res.</em> 46(D1):D8–D13. <a href="https://doi.org/10.1093/nar/gkx1095" target="_blank">doi:10.1093/nar/gkx1095</a>. <a href="https://www.ncbi.nlm.nih.gov/gene/2302" target="_blank">NCBI Gene: FOXJ1</a>.</li>
+            <li id="ref-21" value="21">The UniProt Consortium (2021). UniProt: the universal protein knowledgebase in 2021. <em>Nucleic Acids Res.</em> 49(D1):D480–D489. <a href="https://doi.org/10.1093/nar/dkaa1100" target="_blank">doi:10.1093/nar/dkaa1100</a>. Entry: <a href="https://www.uniprot.org/uniprotkb/Q92949" target="_blank">Q92949</a>.</li>
+            <li id="ref-24" value="24">Vij S., <em>et al.</em> (2012). Evolutionarily ancient association of the FoxJ1 transcription factor with the motile ciliogenic program. <em>PLoS Genet.</em> 8(11):e1003019. <a href="https://doi.org/10.1371/journal.pgen.1003019" target="_blank">doi:10.1371/journal.pgen.1003019</a>.</li>
+            <li id="ref-25" value="25">Wallmeier J., Frank D., Shoemark A., <em>et al.</em> (2019). De novo mutations in <em>FOXJ1</em> result in a motile ciliopathy with hydrocephalus and randomization of left-right body asymmetry. <em>Am. J. Hum. Genet.</em> 105(5):1030–1039. <a href="https://doi.org/10.1016/j.ajhg.2019.09.022" target="_blank">doi:10.1016/j.ajhg.2019.09.022</a>.</li>
+            <li id="ref-27" value="27">Yu X., Ng C.P., Habacher H., Roy S. (2008). Foxj1 transcription factors are master regulators of the motile ciliogenic program. <em>Nat. Genet.</em> 40:1445–1453. <a href="https://doi.org/10.1038/ng.263" target="_blank">doi:10.1038/ng.263</a>.</li>
+        </ol>
+    
+    </section>
+    {% endblock %}
+    
+    {% block extra_scripts %}
+    <script src="{{ url_for('static', filename='js/sbml-layout-viewer.js') }}" defer></script>
+    {% endblock %}

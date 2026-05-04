@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}Finding the Homolog — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Finding the Homolog</h1>
+    <p>How we used BLASTp, a phylogenetic tree, and pairwise alignment to identify the closest known match to our unknown protein.</p>
+</div>
+
+<nav class="results-nav">
+    <a href="{{ url_for('results_page', page_num=1) }}" class="active">Finding the Homolog</a>
+    <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene</a>
+    <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function</a>
+    <a href="{{ url_for('results_page', page_num=4) }}">Homolog Structure</a>
+    <a href="{{ url_for('results_page', page_num=5) }}">Future Work</a>
+</nav>
+
+<section class="content-section">
+
+    <h2>Where we started</h2>
+    <p>
+        We had an unknown purified protein from HeLa cells and its amino acid sequence, but no name and no function. The first step was to search a protein database and find the closest known protein that matched our sequence. Once we had a match, we could use everything that is already known about that protein to figure out what our unknown protein probably does, how its gene is organized, and what it looks like in 3D.
+    </p>
+    <p>
+        To do this we used BLASTp, a tool from NCBI that takes a protein sequence and searches a large database of known proteins to find similar ones <a href="#ref-1" class="ref-callout">[1]</a>. The tool scores each match based on how similar the sequences are and how likely the match is to have happened by chance.
+    </p>
+
+    <h2>Running the BLAST search</h2>
+
+    <div class="figure figure--image" id="figure-1">
+        <img src="{{ url_for('static', filename='images/results_1_blast/homolog-1-blast-form.png') }}" width="1200" height="675" alt="NCBI BLASTp form showing query sequence, nr database selected" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 1. The BLASTp search form with our unknown protein sequence entered and the non-redundant (nr) protein database selected.
+            <strong>Source:</strong> <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">NCBI BLASTp</a> <a href="#ref-1" class="ref-callout">[1]</a>.
+        </div>
+    </div>
+
+    <p>
+        We pasted our amino acid sequence into the NCBI BLASTp form and searched against the <code>nr</code> database, which stands for non-redundant. This database contains protein sequences from many different organisms and is one of the most comprehensive collections available. We kept all search settings at the NCBI defaults so we would get a broad, unbiased result <a href="#ref-1" class="ref-callout">[1]</a>.
+    </p>
+
+    <h2>What the results showed</h2>
+
+    <div class="figure figure--image" id="figure-2">
+        <img src="{{ url_for('static', filename='images/results_1_blast/homolog-2-blast-hits.png') }}" width="1200" height="675" alt="BLASTp results table showing forkhead box protein J1 as top hit across multiple species" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 2. BLASTp results for the unknown protein. Every top hit is a forkhead box protein J1 (FOXJ1) from different species. The human entry had the highest score and the highest percent identity.
+            <strong>Source:</strong> <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">NCBI BLASTp</a> <a href="#ref-1" class="ref-callout">[1]</a>.
+        </div>
+    </div>
+
+    <p>
+        Every single top result was forkhead box protein J1, or FOXJ1, from different species. The human version, <em>Homo sapiens</em> FOXJ1, came out on top with a max score of 783, a total score of 783, and a sequence identity of 97.97%. That means nearly 98 out of every 100 amino acids in our unknown sequence were an exact match to the human FOXJ1 protein.
+    </p>
+    <p>
+        To evaluate the results properly we looked at five values for each hit: max score, total score, E-value, query coverage, and percent identity. The E-value is particularly important. It tells you how likely it is that a match this good could have happened purely by chance. An E-value of 0.0 means the chance of a random match is so small that NCBI rounds it down to zero. All the top FOXJ1 hits had E-values of 0.0, which is as strong a result as you can get <a href="#ref-1" class="ref-callout">[1]</a>.
+    </p>
+    <p>
+        Query coverage was 100% for the top hits, meaning the entire length of our unknown sequence was matched, not just a small region of it. This rules out the possibility that only one small part of our protein happens to look like FOXJ1 by coincidence.
+    </p>
+
+    <h2>Building the phylogenetic tree</h2>
+    <p>
+        To look at the evolutionary context we selected the top-matching FOXJ1 sequences from nine different species and used the BLAST distance tree tool to build a phylogenetic tree. A phylogenetic tree groups sequences by how similar they are to each other, so closely related proteins cluster together <a href="#ref-9" class="ref-callout">[9]</a>.
+    </p>
+
+    <div class="figure figure--image" id="figure-3">
+        <img src="{{ url_for('static', filename='images/results_1_blast/homolog-3-tree.png') }}" width="1200" height="675" alt="Phylogenetic tree of FOXJ1 sequences from nine species including the query protein" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 3. Phylogenetic tree of selected FOXJ1 protein sequences including our unknown query. The query sits closest to <em>Homo sapiens</em> FOXJ1, with other great apes branching off nearby.
+            <strong>Source:</strong> NCBI BLASTp distance tree (Fast Minimum Evolution, Grishin distances) <a href="#ref-1" class="ref-callout">[1]</a><a href="#ref-9" class="ref-callout">[9]</a>.
+        </div>
+    </div>
+
+    <p>
+        In the tree, our unknown protein grouped closest to <em>Homo sapiens</em> FOXJ1. Other great ape FOXJ1 proteins from <em>Pongo abelii</em> (orangutan), <em>Gorilla gorilla gorilla</em>, <em>Pan paniscus</em> (bonobo), and <em>Pan troglodytes</em> (chimpanzee) were also nearby, but all of them sat slightly further from our query than the human sequence did. This makes biological sense because those species are the closest evolutionary relatives of humans, so their FOXJ1 proteins are the most similar to the human version.
+    </p>
+    <p>
+        The fact that our unknown protein clusters within the primate FOXJ1 group, and sits closest to the human sequence specifically, strongly supports the idea that it is a human FOXJ1 protein or something very close to it. This kind of grouping in a phylogenetic tree is one of the standard ways bioinformaticians confirm that two sequences are orthologs, meaning they are the same gene in different species that share a common ancestor <a href="#ref-9" class="ref-callout">[9]</a>.
+    </p>
+
+    <h2>Pairwise alignment</h2>
+    <p>
+        As a final check we ran a pairwise sequence alignment between our unknown protein and <em>Homo sapiens</em> FOXJ1. This compares the two sequences directly, position by position, to see exactly where they match and where they differ.
+    </p>
+
+    <div class="figure figure--image" id="figure-4">
+        <img src="{{ url_for('static', filename='images/results_1_blast/homolog-4-pairwise.png') }}" width="1200" height="675" alt="Pairwise alignment between the unknown protein and Homo sapiens FOXJ1 NP_001445.2" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 4. Pairwise sequence alignment between our unknown protein and <em>Homo sapiens</em> FOXJ1 (NP_001445.2). Score: 783 bits. E-value: 0.0. Identity: 387/395 (98%). Positives: 387/395 (97%). Gaps: 0.
+            <strong>Source:</strong> <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">NCBI BLASTp</a> <a href="#ref-1" class="ref-callout">[1]</a>.
+        </div>
+    </div>
+
+    <p>The alignment supports the BLAST result. In the aligned region, 387 out of 395 amino acids matched between our unknown sequence and human FOXJ1. This gives 98% identity. The score was 783 bits, the E-value was 0.0, and there were no gaps. The positives value was also high, with 387 out of 395 amino acids counted as identical or chemically similar. The high percent identity, E-value of 0.0, full query coverage, no gaps, and placement with human FOXJ1 in the phylogenetic tree strongly support that the unknown protein is most likely a homolog of human FOXJ1.
+        Overall, based on the BLASTP results, phylogenetic tree, and pairwise sequence alignment, Homo sapiens forkhead box protein J1 was the strongest match for homolog. Homo Sapiens FOXJ1 and our novel protein are likely orthologs because in the phylogenetic tree diagram our novel protein is grouped with the forkhead box protein from different species. </p>
+
+    <div class="highlight-box">
+        <p>
+            <strong>Key finding:</strong> BLASTp, the phylogenetic tree, and pairwise alignment all point to the same conclusion. The closest known match to our unknown protein is <strong>forkhead box protein J1 (FOXJ1)</strong> from <em>Homo sapiens</em>, with 98% sequence identity, an E-value of 0.0, 100% query coverage, and zero gaps in the alignment.
+        </p>
+    </div>
+
+    <h2>References</h2>
+    <ol class="references-list">
+        <li id="ref-1" value="1">Altschul S.F., Gish W., Miller W., Myers E.W., Lipman D.J. (1990). Basic local alignment search tool. <em>J. Mol. Biol.</em> 215(3):403–410. <a href="https://doi.org/10.1016/S0022-2836(05)80360-2" target="_blank">doi:10.1016/S0022-2836(05)80360-2</a>. Tool: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">NCBI BLASTp</a>.</li>
+        <li id="ref-9" value="9">Desper R., Gascuel O. (2002). Fast and accurate phylogeny reconstruction algorithms based on the minimum-evolution principle. <em>J. Comput. Biol.</em> 9(5):687–705. <a href="https://doi.org/10.1089/106652702761034136" target="_blank">doi:10.1089/106652702761034136</a>. (Fast Minimum Evolution method used in the NCBI BLAST distance tree).</li>
+    </ol>
+
+</section>
+{% endblock %}

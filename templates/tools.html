@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+{% block title %}Tools & Methods — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Tools &amp; Methods</h1>
+    <p>
+        All the tools, databases, and websites we used throughout this project, from finding the homolog to building this site.
+    </p>
+</div>
+
+<section class="content-section">
+
+    <p class="tool-cards-intro">
+        Click <strong>+ / −</strong> to expand each tool card.
+    </p>
+
+    <h2>Homology, sequences &amp; genome browsing</h2>
+    <div class="tool-cards-rail" role="region" aria-label="Tools in this section">
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--prev" aria-label="Scroll left">‹</button>
+      <div class="tool-cards-rail__track" tabindex="0">
+        <div class="tool-cards-rail__row">
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">NCBI BLAST (BLASTp)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Searching our query protein against the full non-redundant protein database to find the closest known match. This is how we identified <strong>FOXJ1</strong> as the human homolog. We also used the built-in distance tree to see how our query groups with other FOXJ1 sequences, and checked the pairwise alignment against human <strong>NP_001445.2</strong> to confirm the match position by position.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.ncbi.nlm.nih.gov/gene/2302" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">NCBI Gene — <em>FOXJ1</em> (2302)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Looking up the official gene name, synonyms, chromosomal location, and links to RefSeq transcripts. We also used the transcript table here to compare the different mRNA versions of FOXJ1.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.ncbi.nlm.nih.gov/nuccore/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">NCBI Nucleotide (RefSeq)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Pulling up the chromosome reference sequence (<strong>NC_000017.11</strong>), the RefSeqGene record (<strong>NG_013345.1</strong>), the curated mRNA (<strong>NM_001454.4</strong>), and a predicted mRNA isoform (<strong>XM_047435666.1</strong>). We used these to get exon positions, coding sequence coordinates, and poly(A) site information.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.ncbi.nlm.nih.gov/genome/gdv/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">NCBI Genome Data Viewer</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Visually confirming where FOXJ1 sits on chromosome 17 and checking the exon-intron layout. We used this to get the genomic coordinates shown in our gene diagrams and tables.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://epd.epfl.ch/epd/human/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">EPD / EPDnew (human promoters)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Finding candidate promoter elements upstream of the FOXJ1 transcription start site, including TATA boxes, initiator elements, GC boxes, and CCAAT boxes. Each predicted motif comes with a p-value.
+                </p>
+            </div>
+        </details>
+
+        </div>
+      </div>
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--next" aria-label="Scroll right">›</button>
+    </div>
+
+    <h2>Expression &amp; pathways</h2>
+    <div class="tool-cards-rail" role="region" aria-label="Tools in this section">
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--prev" aria-label="Scroll left">‹</button>
+      <div class="tool-cards-rail__track" tabindex="0">
+        <div class="tool-cards-rail__row">
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.proteinatlas.org/2302-FOXJ1" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">Human Protein Atlas — FOXJ1</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Checking where FOXJ1 RNA and protein actually show up across human tissues. This confirmed that expression is concentrated in ciliated cell types like airway epithelium, which fits what the protein does.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://gtexportal.org/home/gene/FOXJ1" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">GTEx Portal — FOXJ1</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> A second independent source of tissue RNA expression data for FOXJ1, used alongside the Human Protein Atlas to back up our expression discussion.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://reactome.org/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">Reactome</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Linking FOXJ1 to reviewed biological pathways, particularly those related to cilia formation and the cell cycle. We cited specific Reactome pathway IDs in the protein function section.
+                </p>
+            </div>
+        </details>
+
+        </div>
+      </div>
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--next" aria-label="Scroll right">›</button>
+    </div>
+
+    <h2>Secondary structure &amp; 3D structure</h2>
+    <div class="tool-cards-rail" role="region" aria-label="Tools in this section">
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--prev" aria-label="Scroll left">‹</button>
+      <div class="tool-cards-rail__track" tabindex="0">
+        <div class="tool-cards-rail__row">
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.compbio.dundee.ac.uk/jpred4/index.html" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">JPred4</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Predicting which parts of the 395-residue FOXJ1 sequence fold into helices, beta strands, or coil regions. The prediction figures and our discussion of them are on the structure results page.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="http://bioinf.cs.ucl.ac.uk/psipred/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">PSIPRED (UCL Protein Analysis Workbench)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> A second independent secondary structure prediction for the same sequence, to cross-check JPred4. Both tools gave the same picture: mostly helical with long disordered regions, which is normal for a transcription factor.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://swissmodel.expasy.org/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">SWISS-MODEL</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Building predicted 3D homology models for FOXJ1. The server returned two models using different templates. Both are clearly labelled as predicted, not experimental. Primary citation: Waterhouse et al., <em>Nucleic Acids Research</em> (2018).
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://alphafold.ebi.ac.uk/entry/Q92949" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">AlphaFold Protein Structure Database (Q92949)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> The full-length predicted structure for human FOXJ1, coloured by confidence score (pLDDT), with a pTM score and a PAE heatmap. Cited per Varadi et al. (<em>Nucleic Acids Research</em> 2022) and Jumper et al. (<em>Nature</em> 2021).
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://alphafoldserver.com/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">AlphaFold Server (DeepMind)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Optional—run your own AlphaFold jobs through a browser. We only point to it on the structure page for people who want to try a fresh prediction.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.rcsb.org/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">RCSB PDB (wwPDB)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Downloading experimental structure coordinates, specifically <strong>2C6Y</strong>, a crystal structure of a related forkhead protein bound to DNA. This was used as the template for SWISS-MODEL Model 02 and as a reference point in the structure discussion.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://3dmol.csb.pitt.edu/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">3Dmol.js</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Showing interactive 3D views of model_01.pdb and model_02.pdb directly in the browser so readers can rotate and explore the structures without installing anything. Citation: Rego &amp; Koes, <em>Nucleic Acids Research</em> 2022.
+                </p>
+            </div>
+        </details>
+
+        </div>
+      </div>
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--next" aria-label="Scroll right">›</button>
+    </div>
+
+    <h2>Protein annotation &amp; analysis</h2>
+    <div class="tool-cards-rail" role="region" aria-label="Tools in this section">
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--prev" aria-label="Scroll left">‹</button>
+      <div class="tool-cards-rail__track" tabindex="0">
+        <div class="tool-cards-rail__row">
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.uniprot.org/uniprotkb/Q92949/entry" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">UniProt — FOXJ1 (Q92949)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> The main protein reference. We used it for function descriptions, subcellular location, post-translational modification notes, and literature links. It is also the accession that connects to the AlphaFold and SWISS-MODEL workflows.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.ebi.ac.uk/interpro/protein/reviewed/Q92949/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">InterPro — FOXJ1 (Q92949)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Domain and family labels for FOXJ1, alongside CDD. InterPro rolls several signature databases into one page, which saved us from clicking through each source separately.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">NCBI Conserved Domain Database (CDD)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Identifying the FH_FOXJ1 forkhead domain hit and the predicted DNA-binding residue positions. The domain boundaries from CDD were used to draw the domain figure on the structure page. Citation: Lu et al., <em>Nucleic Acids Research</em> 2020.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://web.expasy.org/cgi-bin/compute_pi/pi_tool.pl" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">ExPASy ProtParam</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Rough molecular weight and pI from the sequence—the same ExPASy calculator everyone cites in lab reports.
+                </p>
+            </div>
+        </details>
+
+        </div>
+      </div>
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--next" aria-label="Scroll right">›</button>
+    </div>
+
+    <h2>Website delivery</h2>
+    <div class="tool-cards-rail" role="region" aria-label="Tools in this section">
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--prev" aria-label="Scroll left">‹</button>
+      <div class="tool-cards-rail__track" tabindex="0">
+        <div class="tool-cards-rail__row">
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">HTML</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Writing the structure and content of every page, including headings, sections, figures, tables, navigation, and the embedded 3D viewers.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">CSS</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> All the visual styling, including layout, fonts, colors, the navigation bar, tables, figure captions, and the horizontal tool card scroll sections (<code>static/css/style.css</code>).
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">JavaScript</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Small interactive features like the mobile navigation toggle, the background animation, scroll-triggered figure hints, and the left and right scroll buttons on the tool card sections (<code>static/js/main.js</code>).
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://jinja.palletsprojects.com/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">Jinja2 (templates)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Keeping the site consistent. Each results page extends a shared base template so the header, navigation, and styling are the same across all pages. Individual pages only fill in their own content.
+                </p>
+            </div>
+        </details>
+
+        <details class="tool-card">
+            <summary>
+                <h3 class="tool-card__title"><a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener" class="tool-card__title-link" onclick="event.stopPropagation()">Flask (Python)</a></h3>
+            </summary>
+            <div class="tool-card__body">
+                <p>
+                    <strong>Used for:</strong> Running the site as a local web server. Flask handles routing between pages, serves the templates, and delivers static files like images and PDB coordinates to the browser.
+                </p>
+            </div>
+        </details>
+
+        </div>
+      </div>
+      <button type="button" class="tool-cards-rail__nav tool-cards-rail__nav--next" aria-label="Scroll right">›</button>
+    </div>
+
+    <h2>Data sources </h2>
+    <div class="table-scroll">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Resource</th>
+                    <th>What we used it for</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>RefSeq / GenBank</td><td>NM, NP, XM, and XP accession records; genomic NC and NG sequences; feature tables with exon and CDS positions</td></tr>
+                <tr><td>GRCh38 primary assembly</td><td>Chromosomal coordinates for FOXJ1 on chromosome 17</td></tr>
+                <tr><td>UniProtKB / AlphaFold DB</td><td>Canonical protein entry Q92949 and the AlphaFold structure coordinates</td></tr>
+                <tr><td>PDB</td><td>Experimental structure templates, specifically 2C6Y, used for structural comparison</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Methods </h2>
+    <p>
+        We started with a partial amino acid sequence from a purified protein sample. We used public databases and free web tools to figure out the closest human protein, then studied that protein's gene, function, and 3D structure.
+    </p>
+
+    <h3>Finding the closest homolog (BLASTp)</h3>
+    <p>
+        We ran NCBI BLASTp, which compares a protein sequence against all known proteins in the database. We kept all settings at the NCBI defaults. Our query was 395 amino acids long and had no name attached to it.
+    </p>
+    <p>
+        Every top result was a FOXJ1 protein from a primate. The best hits had 100% query coverage and E-values of 0.0. We picked the human RefSeq entry <strong>NP_001445.2</strong> for follow-up because it is a manually curated record and had about 98% identity to our query.
+    </p>
+    <p>
+        We also looked at the BLAST distance tree to see how our query sits relative to other FOXJ1 sequences from different species, and we went through the pairwise alignment to the human protein to check the match position by position. That is how we confirmed FOXJ1 as the homolog.
+    </p>
+
+    <h3>Gene structure, DNA layout, and promoters </h3>
+    <p>
+        To study the gene we used NCBI Gene, the RefSeq nucleotide records for <strong>NM_001454.4</strong> and <strong>XM_047435666.1</strong>, and the Genome Data Viewer to confirm the chromosomal positions and exon layout on the human genome. For promoter elements we used EPDnew, which reports a p-value for each predicted motif. For expression data we used the Human Protein Atlas and GTEx. Where we needed to reference a specific biological pathway we used Reactome.
+    </p>
+
+    <h3>Protein function and domains </h3>
+    <p>
+        For protein function we used UniProt entry <strong>Q92949</strong> as the main reference, with InterPro and the NCBI CDD for domain information. Molecular weight estimates follow the standard ExPASy ProtParam approach.
+    </p>
+
+    <h3>Structure prediction and viewing </h3>
+    <p>
+        We ran the sequence through JPred4 and PSIPRED for secondary structure prediction and compared both outputs. For 3D models we used SWISS-MODEL and the AlphaFold Database entry for human FOXJ1. We also referenced the experimental forkhead structure <strong>2C6Y</strong> from the PDB where it helped the discussion. Domain boundaries in figures come from CDD, InterPro, and UniProt. The interactive 3D viewers on the structure page use 3Dmol.js with PDB files downloaded from SWISS-MODEL.
+    </p>
+
+    <h3>How this website was built</h3>
+    <p>
+        The site runs on Flask. Pages are written in HTML, styled with CSS, and use a small amount of JavaScript for interactive features. Jinja2 templates keep the layout consistent across all pages without repeating code.
+    </p>
+
+</section>
+{% endblock %}

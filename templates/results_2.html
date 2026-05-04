@@ -1,0 +1,383 @@
+{% extends "base.html" %}
+{% block title %}Homolog Gene — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>The Homolog Gene</h1>
+    <p>
+        Here we look at how the <strong><em>FOXJ1</em></strong> gene is organized on the chromosome, what transcripts it produces, and where it is expressed.
+    </p>
+</div>
+
+<nav class="results-nav">
+    <a href="{{ url_for('results_page', page_num=1) }}">Finding the Homolog</a>
+    <a href="{{ url_for('results_page', page_num=2) }}" class="active">Homolog Gene</a>
+    <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function</a>
+    <a href="{{ url_for('results_page', page_num=4) }}">Homolog Structure</a>
+    <a href="{{ url_for('results_page', page_num=5) }}">Future Work</a>
+</nav>
+
+<section class="content-section">
+
+    <div class="card-grid">
+        <article class="card">
+            <div class="card-icon" aria-hidden="true">🧬</div>
+            <h3>Gene name</h3>
+            <p><strong>FOXJ1</strong> — forkhead box J1. It is a protein-coding gene in <em>Homo sapiens</em>.</p>
+        </article>
+        <article class="card">
+            <div class="card-icon" aria-hidden="true">📍</div>
+            <h3>Location</h3>
+            <p>
+                Chromosome band: <strong>17q25.1</strong><br>
+                Genomic span: <strong>complement(76,136,333 – 76,141,245)</strong> on <strong>NC_000017.11</strong>
+            </p>
+        </article>
+        <article class="card">
+            <div class="card-icon" aria-hidden="true">🔗</div>
+            <h3>NCBI Gene</h3>
+            <p>
+                <strong>Gene ID 2302</strong><br>
+                <a href="https://www.ncbi.nlm.nih.gov/gene/2302">ncbi.nlm.nih.gov/gene/2302</a>
+            </p>
+        </article>
+        <article class="card">
+            <div class="card-icon" aria-hidden="true">🧪</div>
+            <h3>Genome assembly</h3>
+            <p>
+                <strong>GRCh38.p14</strong> (GCF_000001405.40)<br>
+                All coordinates on this page come from chromosome 17 of this assembly.
+            </p>
+        </article>
+    </div>
+
+    <h2>Gene names, accession numbers, and database links</h2>
+    <p>
+        FOXJ1 goes by several other names in older literature and databases, including <strong>HFH4</strong>, <strong>HFH-4</strong>, <strong>CILD43</strong>, and <strong>FKHL13</strong>. FOXJ1 has exactly two transcripts. The first is <strong>NM_001454.4</strong>, which is the main reviewed transcript and carries the MANE Select label. The second is <strong>XM_047435666.1</strong>, a computer-predicted version. Both produce a protein of 421 amino acids. We studied both transcripts in depth and compare them in the tables below.
+    </p>
+
+    <div class="card-grid">
+        <article class="card">
+            <h3>Genomic reference sequences</h3>
+            <p>
+                Chromosome 17:
+                <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_000017.11">NC_000017.11</a><br>
+                RefSeqGene:
+                <a href="https://www.ncbi.nlm.nih.gov/nuccore/NG_013345.1">NG_013345.1</a>
+            </p>
+        </article>
+    </div>
+
+    <h3>Transcripts and proteins we studied</h3>
+    <div class="table-scroll">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Database</th>
+                    <th>Type</th>
+                    <th>Accession</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NCBI RefSeq</td>
+                    <td>mRNA (MANE Select, reviewed)</td>
+                    <td>NM_001454.4</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_001454.4">Nucleotide record</a></td>
+                </tr>
+                <tr>
+                    <td>NCBI RefSeq</td>
+                    <td>Protein</td>
+                    <td>NP_001445.2</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/protein/NP_001445.2">Protein record</a></td>
+                </tr>
+                <tr>
+                    <td>NCBI RefSeq</td>
+                    <td>mRNA (predicted, variant X1)</td>
+                    <td>XM_047435666.1</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/nuccore/XM_047435666.1">Nucleotide record</a></td>
+                </tr>
+                <tr>
+                    <td>NCBI RefSeq</td>
+                    <td>Protein (predicted)</td>
+                    <td>XP_047291622.1</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/protein/XP_047291622.1">Protein record</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Table 1. FOXJ1 gene parts and positions (NM_001454.4)</h2>
+    <p>
+        Promoter motif positions come from the Eukaryotic Promoter Database (EPD) <a href="#ref-11" class="ref-callout">[11]</a>. The promoter region covers roughly 2 kb upstream and 100 bp downstream of the transcription start site (TSS). Since the gene is on the minus strand, higher chromosome numbers correspond to the 5' end of the RNA. Local positions for exons and introns use the unspliced gene with TSS set to 1. CDS and poly(A) positions refer to the mature mRNA NM_001454.4, which is 2,587 nucleotides long.
+    </p>
+    <div class="table-scroll">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Gene component</th>
+                    <th>Local position</th>
+                    <th>Genomic position (NC_000017.11)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gene (unspliced span)</td><td>1 – 4,913 (TSS = 1)</td><td>complement(76,136,333 – 76,141,245)</td></tr>
+                <tr><td>TATA-box</td><td>−31, −82, −584, −924, −1248, −1281</td><td>Relative to TSS (p = 0.01)</td></tr>
+                <tr><td>TSS</td><td>1</td><td>76,141,245</td></tr>
+                <tr><td>Initiator </td><td>−556, −682, −1949</td><td>Relative to TSS (p = 0.001)</td></tr>
+                <tr><td>Promoter region</td><td>−2000 to +100 vs TSS</td><td>~76,141,145 – 76,143,245</td></tr>
+                <tr><td>GC-box</td><td>78, −74, −93, −175, −344, −649, −1006, −1129, −1672, −1696</td><td>Relative to TSS (p = 0.001)</td></tr>
+                <tr><td>CCAAT-box</td><td>−104, −1814</td><td>Relative to TSS (p = 0.001)</td></tr>
+                <tr><td>Poly(A) signal</td><td>2,565 – 2,570 (mRNA)</td><td>AATAAA; 76,136,351 – 76,136,356</td></tr>
+                <tr><td>Poly(A) site</td><td>2,587 (mRNA)</td><td>76,136,333</td></tr>
+                <tr><td>Exon 1</td><td>1 – 132</td><td>76,141,114 – 76,141,245</td></tr>
+                <tr><td>Intron 1</td><td>133 – 682</td><td>76,140,564 – 76,141,113</td></tr>
+                <tr><td>Exon 2</td><td>683 – 1,349</td><td>76,139,898 – 76,140,564</td></tr>
+                <tr><td>Intron 2</td><td>1,350 – 3,126</td><td>76,138,121 – 76,139,897</td></tr>
+                <tr><td>Exon 3</td><td>3,127 – 4,913</td><td>76,136,333 – 76,138,120</td></tr>
+                <tr><td>CDS</td><td>302 – 1,567 (mRNA)</td><td>76,139,898 – 76,140,395; 76,137,353 – 76,138,120</td></tr>
+                <tr><td>mRNA length</td><td>2,587 nt</td><td>NM_001454.4</td></tr>
+                <tr><td>Locus span</td><td>4,913 nt</td><td>76,136,333 – 76,141,245</td></tr>
+                <tr><td>CDS length</td><td>1,266 nt</td><td>n/a</td></tr>
+                <tr><td>Protein</td><td>421 aa</td><td><a href="https://www.ncbi.nlm.nih.gov/protein/NP_001445.2">NP_001445.2</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Diagram 1. Gene structure of FOXJ1</h3>
+    <div class="figure figure--image">
+        <img src="{{ url_for('static', filename='images/results_gene/gene.jpg') }}" width="1200" height="900" alt="Diagram of FOXJ1 gene structure showing promoter, three exons, two introns, and poly-A signal" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Diagram 1. A simplified map of the FOXJ1 locus showing the promoter region, three exons, two introns, and the poly(A) signal. Positions match those in Table 1.
+            <strong>Source:</strong> Coordinates from NCBI Gene (Gene ID 2302) <a href="#ref-19" class="ref-callout">[19]</a> and NCBI Nucleotide NC_000017.11 <a href="#ref-19" class="ref-callout">[19]</a>.
+        </div>
+    </div>
+
+    <h2>Table 2. Comparing the two transcripts </h2>
+    <p>
+        Both transcripts come from the same 4.9 kb stretch of DNA on chromosome 17. The coding sequence is identical in both. The main difference is how the 5' end is arranged.
+    </p>
+    <div class="table-scroll">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Gene component</th>
+                    <th>NM_001454.4</th>
+                    <th>XM_047435666.1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>TSS</td><td>76,141,245</td><td>76,141,245</td></tr>
+                <tr><td>5' UTR (bp)</td><td>301</td><td>850</td></tr>
+                <tr><td>5' UTR location</td><td>76,141,114 – 76,141,245; 76,140,396 – 76,140,564</td><td>76,140,396 – 76,141,245</td></tr>
+                <tr><td>CDS (bp)</td><td>1,266</td><td>1,266</td></tr>
+                <tr><td>CDS range (exonic)</td><td>76,139,898 – 76,140,395; 76,137,353 – 76,138,120</td><td>Same CDS blocks</td></tr>
+                <tr><td>3' UTR (bp)</td><td>1,020</td><td>1,020</td></tr>
+                <tr><td>3' UTR location</td><td>76,136,333 – 76,137,352</td><td>76,136,333 – 76,137,352</td></tr>
+                <tr><td>Amino acids</td><td>421</td><td>421</td></tr>
+                <tr><td>Forkhead domain (aa)</td><td>~120 – 210</td><td>~120 – 210</td></tr>
+                <tr><td>Spliced length</td><td>2,587 nt</td><td>3,136 nt</td></tr>
+                <tr><td>Locus span</td><td>4,913 nt</td><td>4,913 nt</td></tr>
+                <tr><td>Exons</td><td>3</td><td>2</td></tr>
+                <tr><td>Introns</td><td>2</td><td>1</td></tr>
+                <tr><td>Exon 1</td><td>76,141,114 – 76,141,245</td><td>76,139,898 – 76,141,245</td></tr>
+                <tr><td>Intron 1</td><td>76,140,564 – 76,141,113</td><td>76,138,121 – 76,139,897</td></tr>
+                <tr><td>Exon 2</td><td>76,139,898 – 76,140,564</td><td>76,136,333 – 76,138,120</td></tr>
+                <tr><td>Intron 2</td><td>76,138,121 – 76,139,897</td><td>N/A</td></tr>
+                <tr><td>Exon 3</td><td>76,136,333 – 76,138,120</td><td>N/A</td></tr>
+                <tr><td>Poly(A) signal</td><td>AATAAA at 76,136,351 – 76,136,356</td><td>Not annotated</td></tr>
+                <tr><td>Poly(A) site</td><td>76,136,333</td><td>Not annotated</td></tr>
+                <tr><td>Signal peptide</td><td>None</td><td>None</td></tr>
+                <tr><td>Status</td><td>MANE Select — reviewed</td><td>Computer-predicted — variant X1</td></tr>
+                <tr><td>Protein</td><td><a href="https://www.ncbi.nlm.nih.gov/protein/NP_001445.2">NP_001445.2</a></td><td><a href="https://www.ncbi.nlm.nih.gov/protein/XP_047291622.1">XP_047291622.1</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Diagram 2. Pre-mRNA for NM_001454.4 (MANE Select)</h3>
+    <div class="figure figure--image">
+        <img src="{{ url_for('static', filename='images/results_gene/isoform1.jpg') }}" width="1200" height="900" alt="Diagram of NM_001454.4 pre-mRNA with three exons, two introns, 5' UTR, CDS, and 3' UTR" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Diagram 2. The spliced RNA structure for <strong>NM_001454.4</strong>. Three exons, two introns. Numbers match Table 2.
+            <strong>Source:</strong> NCBI Nucleotide NM_001454.4 <a href="#ref-19" class="ref-callout">[19]</a>.
+        </div>
+    </div>
+
+    <h3>Diagram 3. Pre-mRNA for XM_047435666.1 (variant X1)</h3>
+    <div class="figure figure--image">
+        <img src="{{ url_for('static', filename='images/results_gene/isoform2.jpg') }}" width="513" height="473" alt="Diagram of XM_047435666.1 with two exons, one intron, and a longer 5' UTR" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Diagram 3. The spliced RNA structure for the predicted variant <strong>XM_047435666.1</strong>. Two exons, one intron, and a longer 5' UTR. Numbers match Table 2.
+            <strong>Source:</strong> NCBI Nucleotide XM_047435666.1 <a href="#ref-19" class="ref-callout">[19]</a>.
+        </div>
+    </div>
+
+    <h2>Table 3. Quick summary of both transcripts</h2>
+    <div class="table-scroll">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Variant</th>
+                    <th>mRNA</th>
+                    <th>Protein</th>
+                    <th>Pre-mRNA (bp)</th>
+                    <th>5' UTR (bp)</th>
+                    <th>Exons</th>
+                    <th>Introns</th>
+                    <th>CDS (bp)</th>
+                    <th>3' UTR (bp)</th>
+                    <th>Spliced nt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MANE Select</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_001454.4">NM_001454.4</a></td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/protein/NP_001445.2">NP_001445.2</a></td>
+                    <td>4,913</td>
+                    <td>301</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1,266</td>
+                    <td>1,020</td>
+                    <td>2,587</td>
+                </tr>
+                <tr>
+                    <td>Variant X1</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/nuccore/XM_047435666.1">XM_047435666.1</a></td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/protein/XP_047291622.1">XP_047291622.1</a></td>
+                    <td>4,913</td>
+                    <td>850</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1,266</td>
+                    <td>1,020</td>
+                    <td>3,136</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>What this means</h2>
+
+    <h3>The gene</h3>
+    <p>
+        FOXJ1 sits on chromosome 17 and spans about 4.9 kb of DNA on the minus strand. The minus strand orientation means the 5' end of the RNA points toward higher chromosome coordinate numbers, and the 3' end with the poly(A) tail points toward lower numbers. The gene has three exons and two introns in its main transcript. The promoter region has multiple regulatory elements upstream of the transcription start site, including TATA boxes, GC boxes, CCAAT boxes, and initiator elements, all identified from the EPD database <a href="#ref-11" class="ref-callout">[11]</a>. These elements help control when and in which cells the gene is switched on.
+    </p>
+
+    <h3>Why we chose these two transcripts</h3>
+    <p>
+        We chose NM_001454.4 as our main reference because it is the MANE Select transcript. MANE stands for Matched Annotation from NCBI and EMBL-EBI, and the Select label means it is the single best-supported transcript for this gene, chosen based on experimental data <a href="#ref-19" class="ref-callout">[19]</a>. It produces a 421 amino acid protein (NP_001445.2), which is the protein we use throughout the rest of this project.
+    </p>
+    <p>
+        We included XM_047435666.1 as a comparison because it is a computer-predicted version of the same gene. It produces the same 421 amino acid protein but predicts a longer 5' UTR (850 bp instead of 301 bp) and a simpler exon structure with only two exons and one intron. Comparing the two shows how prediction tools can give a different picture of the non-coding parts of a gene even when the protein sequence is the same.
+    </p>
+
+    <h3>How the two transcripts differ in their splicing</h3>
+    <p>
+        Both transcripts share the same last exon. In NM_001454.4 the 5' region is split into exon 1, intron 1, then exon 2 before reaching the shared last exon. In XM_047435666.1 the whole 5' region is predicted as a single large first exon, so the splice map looks different even though the coding blocks are identical and both produce the same protein.
+    </p>
+    <p>
+        A longer 5' UTR like the one in XM_047435666.1 could in theory affect how much protein is made or how stable the mRNA is, because the 5' UTR can contain regulatory sequences that affect translation <a href="#ref-14" class="ref-callout">[14]</a>. Without experimental data we cannot confirm whether this predicted isoform exists in cells or whether the longer UTR changes anything in practice.
+    </p>
+
+    <h2>Gene expression</h2>
+    <p>
+        FOXJ1 is expressed in a very specific set of tissues, all of which carry motile cilia. The strongest expression is in the bronchial mucosa of the lung, the endometrium, and the fallopian tube. Medium expression is seen in the nasopharynx, efferent ducts, and choroid plexus. Low expression is detected in the testis and cerebral cortex. Essentially no FOXJ1 protein is found in tissues like liver, skeletal muscle, skin, bone marrow, spleen, or lymph node, all of which lack motile cilia <a href="#ref-22" class="ref-callout">[22]</a>.
+    </p>
+    <p>
+        This narrow expression pattern makes sense for a transcription factor whose only known job is to switch on the motile cilia formation program. It does not need to be on in cells that do not build cilia.
+    </p>
+
+    <div class="figure figure--image" id="figure-1">
+        <img src="{{ url_for('static', filename='images/protein_functions/expression.png') }}" width="1200" alt="RNA and protein expression summary for FOXJ1 across human tissues" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 1. RNA and protein expression for FOXJ1 across human tissues from the Human Protein Atlas. Expression is restricted to ciliated epithelial tissues and is absent from most other tissue types.
+            <strong>Source:</strong> Human Protein Atlas, FOXJ1 <a href="#ref-22" class="ref-callout">[22]</a>. <a href="https://www.proteinatlas.org/2302-FOXJ1" target="_blank">proteinatlas.org/2302-FOXJ1</a>.
+        </div>
+    </div>
+
+    <div class="figure figure--image" id="figure-2">
+        <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/expression_brain.png') }}" width="1200" alt="FOXJ1 brain RNA expression in Human Protein Atlas showing highest levels in choroid plexus" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 2. Brain RNA expression for FOXJ1 from the Human Protein Atlas. The choroid plexus shows the strongest signal, which fits with the fact that it is lined by ciliated ependymal cells that use FOXJ1 to maintain their cilia.
+            <strong>Source:</strong> Human Protein Atlas <a href="#ref-22" class="ref-callout">[22]</a>. <a href="https://www.proteinatlas.org/2302-FOXJ1" target="_blank">proteinatlas.org/2302-FOXJ1</a>.
+        </div>
+    </div>
+
+    <h3>Which transcript is expressed in which tissue</h3>
+    <p>
+        Because NM_001454.4 is the experimentally supported MANE Select transcript, it is the one we can confidently say is expressed in ciliated tissues. XM_047435666.1 is a computer-predicted isoform and there is no isoform-level RNA-seq data that confirms it is actually produced in specific tissues. Both transcripts encode the same 421 amino acid protein, so at the protein level there is no difference between them. The tissue expression data from the Human Protein Atlas and GTEx reflects the combined signal for FOXJ1 without distinguishing between the two transcripts <a href="#ref-22" class="ref-callout">[22]</a> (<a href="https://gtexportal.org/home/gene/FOXJ1" target="_blank">GTEx Portal</a>; <a href="{{ url_for('references') }}#tools">References &mdash; tools</a>).
+    </p>
+    <p>
+        In terms of physiological state, FOXJ1 is expressed in ciliated cells that are actively maintaining their motile cilia. In the airway epithelium this means mature multiciliated cells responsible for mucociliary clearance. In the fallopian tube it is expressed in the ciliated cells that help move the egg toward the uterus. In the choroid plexus and ependyma it is in the cells whose cilia circulate cerebrospinal fluid through the brain ventricles <a href="#ref-22" class="ref-callout">[22]</a>.
+    </p>
+
+    <p>
+        For a discussion of how these expression patterns connect to the specific functions of the FOXJ1 protein, see the <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function page</a>.
+    </p>
+
+    <h2>Development-related differential gene expression</h2>
+    <p>
+        Differential gene expression means a gene is turned on or off at different levels depending on the time, tissue, or stage of development. Not all genes are active all the time in all cells. Some switch on only at specific points in development and then stay on, while others are active only briefly. When a gene follows a consistent pattern of being on in some developmental stages and off in others, we call that development-related differential expression <a href="#ref-14" class="ref-callout">[14]</a>.
+    </p>
+
+    <h3>Which transcripts show development-related differential expression</h3>
+    <p>
+        Both FOXJ1 transcripts, NM_001454.4 and XM_047435666.1, produce the same 421 amino acid protein, so at the protein level they cannot be distinguished. The key difference between them is the 5' UTR: NM_001454.4 has a 301 bp 5' UTR and XM_047435666.1 has an 850 bp 5' UTR. A longer 5' UTR can contain regulatory elements such as upstream open reading frames or RNA secondary structures that affect how much protein gets made from the mRNA <a href="#ref-14" class="ref-callout">[14]</a>. This means it is possible that at certain developmental stages one transcript produces more FOXJ1 protein than the other, even though both carry the same coding sequence. Without isoform-level RNA-seq experiments we cannot confirm this, but it is a real possibility given the size difference in the UTRs.
+    </p>
+    <p>
+        What we can say with confidence is that FOXJ1 RNA is detected across virtually every stage of human life. The <a href="https://www.ebi.ac.uk/gxa/genes/ENSG00000129654" target="_blank">EMBL-EBI Expression Atlas</a> developmental RNA survey for FOXJ1 (ENSG00000129654) shows signal starting at 4 weeks post-conception and continuing consistently through the following prenatal stages: 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 18, and 19 weeks post-conception. After birth, expression continues across every postnatal stage: fetal, neonate, infant, toddler, school-age child, juvenile, adolescent, young adult, middle adult, and elderly (database; see <a href="{{ url_for('references') }}#tools">References &mdash; tools</a>).
+    </p>
+
+    <div class="figure figure--image" id="figure-3">
+        <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/dev.png') }}" width="1200" alt="Expression Atlas developmental RNA heatmap for FOXJ1 showing expression from 4 weeks post conception through elderly" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 3. Developmental RNA expression heatmap for FOXJ1 (ENSG00000129654) from the EMBL-EBI Expression Atlas. Each row is a separate tissue experiment. Darker blue means higher expression. Signal is present from 4 weeks post-conception and continues across all postnatal life stages.
+            <strong>Source:</strong> <a href="https://www.ebi.ac.uk/gxa/genes/ENSG00000129654" target="_blank">EMBL-EBI Expression Atlas</a> (see <a href="{{ url_for('references') }}#tools">References &mdash; tools</a>). <a href="https://www.ebi.ac.uk/gxa/genes/ENSG00000129654" target="_blank">ebi.ac.uk/gxa/genes/ENSG00000129654</a>.
+        </div>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr><th>Stage window</th><th>Typical FOXJ1 signal</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>4–9 weeks post-conception</td><td>Low to medium (embryonic node, early organ rudiments)</td></tr>
+            <tr><td>10–19 weeks post-conception</td><td>Medium to high (developing lung, kidney, CNS ependymal cells)</td></tr>
+            <tr><td>Fetal</td><td>Medium to high</td></tr>
+            <tr><td>Neonate / infant / toddler</td><td>Medium</td></tr>
+            <tr><td>School-age child / juvenile / adolescent</td><td>Medium</td></tr>
+            <tr><td>Young adult / middle adult</td><td>Medium to high (maintenance of multiciliated tissues)</td></tr>
+            <tr><td>Elderly</td><td>Low to medium</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Differences in expression across development</h3>
+    <p>
+        The expression level of FOXJ1 is not the same at every stage. The heatmap in <a href="#figure-3" class="figure-callout">Figure 3</a> shows that signal is strongest during the prenatal window, particularly between weeks 4 and 13 post-conception, where multiple tissue datasets show high expression. This early prenatal signal is explained by the fact that FOXJ1 is needed very early in embryo development to set the left-right body axis. At around weeks 4 to 6, the embryonic node contains monociliated cells whose beating cilia generate a directional fluid flow that determines which side of the body becomes left and which becomes right. FOXJ1 must be active at this stage for those cilia to form at all <a href="#ref-25" class="ref-callout">[25]</a>.
+    </p>
+    <p>
+        Later in prenatal development, FOXJ1 expression shifts to the developing lung, where it drives airway epithelial progenitor cells to differentiate into mature multiciliated cells. This happens before the structural cilia genes are switched on, which fits with FOXJ1's role as the upstream activator that starts the whole cilia-building process <a href="#ref-25" class="ref-callout">[25]</a>. After birth, expression continues at lower but consistent levels across all tissues that need to maintain their motile cilia throughout life.
+    </p>
+
+    <h3>How this connects to FOXJ1 function</h3>
+    <p>
+        The developmental expression pattern of FOXJ1 maps directly onto every biological context where motile cilia are needed. It is on early in the embryo when the body axis is being set. It goes up in the developing lung when airway cilia are being built. It stays on in adult ciliated tissues to keep those cilia working. This is exactly what you would expect from a master regulator whose entire job is to activate the motile cilia program <a href="#ref-25" class="ref-callout">[25]</a>.
+    </p>
+    <p>
+        When FOXJ1 is lost or mutated, the consequences match this expression pattern closely. Patients with CILD43 have problems in every tissue where FOXJ1 would normally be expressed: chronic lung disease from failed mucociliary clearance, randomized organ positioning from failed embryonic node cilia, and in some cases hydrocephalus from failed ependymal cilia <a href="#ref-25" class="ref-callout">[25]</a>. This makes FOXJ1 one of the clearest examples of a transcription factor whose development-related expression pattern directly controls organ formation across multiple tissue systems.
+    </p>
+
+    <h2>References</h2>
+    <ol class="references-list">
+        <li id="ref-11" value="11">Dreos R., Ambrosini G., Perier R.C., Bucher P. (2015). The Eukaryotic Promoter Database: expansion of EPDnew and new promoter analysis tools. <em>Nucleic Acids Res.</em> 43(D1):D92–D96. <a href="https://doi.org/10.1093/nar/gku1111" target="_blank">doi:10.1093/nar/gku1111</a>.</li>
+        <li id="ref-14" value="14">Hinnebusch A.G., Ivanov I.P., Sonenberg N. (2016). Translational control by 5&prime;-untranslated regions of eukaryotic mRNAs. <em>Science</em> 352(6292):1413–1416. <a href="https://doi.org/10.1126/science.aad9868" target="_blank">doi:10.1126/science.aad9868</a>.</li>
+        <li id="ref-19" value="19">NCBI Resource Coordinators (2018). Database resources of the National Center for Biotechnology Information. <em>Nucleic Acids Res.</em> 46(D1):D8–D13. <a href="https://doi.org/10.1093/nar/gkx1095" target="_blank">doi:10.1093/nar/gkx1095</a>. Pages: <a href="https://www.ncbi.nlm.nih.gov/gene/2302" target="_blank">NCBI Gene FOXJ1</a>, <a href="https://www.ncbi.nlm.nih.gov/nuccore/" target="_blank">Nucleotide</a>.</li>
+        <li id="ref-22" value="22">Uhlen M., Fagerberg L., Hallstr&ouml;m B.M., <em>et al.</em> (2015). Tissue-based map of the human proteome. <em>Science</em> 347(6220):1260419. <a href="https://doi.org/10.1126/science.1260419" target="_blank">doi:10.1126/science.1260419</a>. Database: <a href="https://www.proteinatlas.org/2302-FOXJ1" target="_blank">Human Protein Atlas, FOXJ1</a>.</li>
+        <li id="ref-25" value="25">Wallmeier J., Frank D., Shoemark A., <em>et al.</em> (2019). De novo mutations in <em>FOXJ1</em> result in a motile ciliopathy with hydrocephalus and randomization of left-right body asymmetry. <em>Am. J. Hum. Genet.</em> 105(5):1030–1039. <a href="https://doi.org/10.1016/j.ajhg.2019.09.022" target="_blank">doi:10.1016/j.ajhg.2019.09.022</a>. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6849114/" target="_blank">PMC6849114</a>.</li>
+    </ol>
+
+</section>
+{% endblock %}

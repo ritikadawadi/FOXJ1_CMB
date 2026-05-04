@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Introduction &amp; Background, CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Introduction</h1>
+    <p>NCBI databases, BLAST, and FOXJ1 as our top human hit.</p>
+</div>
+
+<section class="content-section">
+    <p>
+        Bioinformatics uses computer tools and online databases to study DNA, RNA, and protein sequences. Many bioinformatics tools are freely available online, which makes it easier for researchers to use the same reference sequences, accession numbers, and databases when studying genes and proteins <a href="#ref-1" class="ref-callout">[1]</a>. These databases are useful for accessing gene records, protein sequences, transcript information, conserved domains, and genome locations. In this project, we used NCBI tools such as GenBank, RefSeq, BLAST, CDD, and Genome Data Viewer <a href="#ref-2" class="ref-callout">[2]</a>. These tools helped us find similar sequences, study gene organization, compare transcript variants, and identify important protein domains.
+    </p>
+
+    <p>
+        In this project, we used bioinformatics to analyze our assigned partial amino acid sequence and compare it with known proteins. Using BLAST, we identified <em>FOXJ1</em> as the closest human homolog of our novel protein. <em>FOXJ1</em> is involved in motile ciliogenesis. Motile cilia are tiny hair-like structures on the surface of certain cells that beat in coordinated waves to move fluid. They are found in the airways, the brain ventricles, the reproductive tract, and the embryonic node <a href="#ref-3" class="ref-callout">[3]</a>. Therefore, mutations in <em>FOXJ1</em> in humans cause a condition called primary ciliary dyskinesia type 43 (CILD43), which leads to chronic lung disease, abnormal organ positioning, and in some cases hydrocephalus <a href="#ref-4" class="ref-callout">[4]</a>. Studying its gene structure, protein domains, predicted structure, and function helped us predict our novel protein.
+    </p>
+
+    <h2>Objectives</h2>
+    <ol>
+        <li>Use the partial sequence we were given to find the best homolog we can and say what kind of homology that is.</li>
+        <li>Map how the homolog&rsquo;s gene is set up on the chromosome: promoter, exons, introns, and which strand it is on.</li>
+        <li>Compare two mRNA transcript variants and explain how their structures differ.</li>
+        <li>Look at the homolog&rsquo;s protein structure: main domains, predicted motifs, and regions tied to function.</li>
+        <li>Explain what the protein does in the cell, where it goes, and how that lines up with papers we read.</li>
+        <li>Propose two experiments that could check whether our unknown protein really matches the homolog we picked.</li>
+    </ol>
+
+    <h2>References</h2>
+    <ol class="references-list">
+        <li id="ref-1" value="1">Luscombe N.M., Greenbaum D., Gerstein M. (2001). What is bioinformatics? A proposed definition and overview of the field. <em>Methods Inf. Med.</em> 40(4):346&ndash;358. <a href="https://doi.org/10.1055/s-0038-1634098" target="_blank" rel="noopener">doi:10.1055/s-0038-1634098</a>.</li>
+        <li id="ref-2" value="2">NCBI Resource Coordinators (2018). Database resources of the National Center for Biotechnology Information. <em>Nucleic Acids Res.</em> 46(D1):D8&ndash;D13. <a href="https://doi.org/10.1093/nar/gkx1095" target="_blank" rel="noopener">doi:10.1093/nar/gkx1095</a>.</li>
+        <li id="ref-3" value="3">Choksi S.P., Lauter G., Roy S. (2014). Switching on cilia: transcriptional networks regulating ciliogenesis. <em>Development</em> 141(7):1427&ndash;1441. <a href="https://doi.org/10.1242/dev.074666" target="_blank" rel="noopener">doi:10.1242/dev.074666</a>.</li>
+        <li id="ref-4" value="4">Wallmeier J., Frank D., Shoemark A., <em>et al.</em> (2019). De novo mutations in <em>FOXJ1</em> result in a motile ciliopathy with hydrocephalus and randomization of left-right body asymmetry. <em>Am. J. Hum. Genet.</em> 105(5):1030&ndash;1039. <a href="https://doi.org/10.1016/j.ajhg.2019.09.022" target="_blank" rel="noopener">doi:10.1016/j.ajhg.2019.09.022</a>. PMC: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6849114/" target="_blank" rel="noopener">PMC6849114</a>.</li>
+    </ol>
+
+</section>
+{% endblock %}

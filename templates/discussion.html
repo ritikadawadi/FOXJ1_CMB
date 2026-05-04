@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Discussion &amp; Conclusion — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Discussion &amp; Conclusion</h1>
+    <p>Interpretation of results, limitations, and future directions</p>
+</div>
+
+<section class="content-section">
+    <h2>Discussion and conclusion</h2>
+    <p>
+        The overall goal of this project was to identify and analyze our unknown purified protein using bioinformatics tools. In the beginning, we only had the partial amino acid sequence which was used to make comparisons to find a potential homolog of our novel protein. After identifying the predicted homolog, we studied its gene organization, protein structure, and biological function. We also proposed future experiments that could help confirm the identity and function of the unknown protein.
+    </p>
+
+    <h2>Finding the homolog</h2>
+    <p>
+        BLASTP was used to compare the partial amino acid sequence of our novel protein with known protein sequences. This search identified forkhead box protein J1 or <em>FOXJ1</em> as the strongest match to our unknown protein based on different scores. This indicated that our novel protein most likely belongs to the FOXJ1 family. Further analysis from BLASTP scores, the phylogenetic tree and pairwise sequence alignment showed <em>Homo sapiens</em> FOXJ1 as the closest homolog to our novel protein. This allowed us to use <em>Homo sapiens</em> FOXJ1 to study the possible gene organization, protein structure, and function of our novel protein.
+    </p>
+
+    <h2>The homolog&rsquo;s gene</h2>
+    <p>
+        The <em>FOXJ1</em> gene is a protein coding gene which is about 4913 base pairs long, located on chromosome 17 and on the minus strand. The gene structure shows several regulators before and after the coding region. The promoter region extends around the transcription start site including the sequence upstream of the TSS and a small region beyond the TSS. It contains motifs such as TATA boxes, GC boxes, CCAAT boxes, and initiator elements. The 5&prime; UTR may affect how efficiently ribosomes begin translation, while the 3&prime; UTR can influence mRNA stability, localization, and regulation by RNA-binding proteins or microRNAs. The poly(A) signal and poly(A) site near the 3&prime; end also help with proper mRNA processing and stability. Similarly, the exon&ndash;intron structure adds another regulatory step for mRNA processing.
+    </p>
+    <p>
+        The <em>FOXJ1</em> gene has two transcripts. The first transcript is <strong>NM_001454.4</strong>, which is the MANE Select transcript and is a well-supported transcript for the gene. This transcript contains 3 exons and 2 introns and codes for the FOXJ1 protein, which is 421 amino acids long. The second transcript is the transcript variant X1, <strong>XM_047435666.1</strong>. This is a computational prediction based transcript. It has 2 exons and 1 intron. Although the two transcripts have different exon&ndash;intron structures, both code for a 421 amino acid protein. They also differ in their 5&prime; UTR length, which may affect mRNA regulation and translation efficiency. This suggests that the transcript differences may affect the organization of the mRNA more than the final protein length.
+    </p>
+    <p>
+        The main protein domain present in our gene was the forkhead DNA-binding domain of the FOXJ1 protein. This helps explain the function of FOXJ1 as a transcription factor. The gene was also found to be expressed in tissues where motile cilia are important, such as the airway epithelium, reproductive epithelium, and ependymal cells.
+    </p>
+
+    <h2>The homolog&rsquo;s protein structure</h2>
+    <p>
+        The structure of FOXJ1 helps explain its function as a transcription factor. The main domain found was the forkhead DNA-binding domain around residues 112&ndash;190. This region allows the protein to recognize and bind DNA. The secondary structure predictions showed mostly alpha-helices and coil regions. The central forkhead region appears to be the most stable and functional part of the protein, while the N-terminal and C-terminal regions are more flexible. This suggests that the middle region is mainly responsible for DNA binding, while the flexible ends may help with regulation, protein interactions, or post-translational modifications. FOXJ1 also does not have a catalytic active site or transmembrane region, so its structure supports its role as a nuclear protein that controls genes needed for motile cilia formation.
+    </p>
+
+    <h2>The homolog&rsquo;s protein function</h2>
+    <p>
+        The protein function of FOXJ1 controls the whole process of motile cilia formation. It is a transcription factor and works by entering the nucleus, binding DNA through its forkhead domain, and turning on many genes needed to build motile cilia. It is also involved in mitotic pathways such as mitotic prometaphase, mitotic telophase/cytokinesis, and G1/S and G2/M cell-cycle phases because centrioles from cell division later become basal bodies for cilia formation. The interaction with proteins such as RFX proteins and IFT88 also supports this function because FOXJ1 does not build the cilium by itself; instead it activates and coordinates the genes and pathways needed for basal body docking, axoneme formation, and ciliary movement. Overall, FOXJ1 functions more like a master switch for the motile cilia, and disruption of this gene can affect any tissue that depends on motile cilia.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        In conclusion, this project successfully demonstrated how bioinformatics tools can be used to identify and analyze the novel protein. We were able to identify that our unknown protein is most closely related to the human homolog FOXJ1 and used it to study the organization and function. However, there were some limitations in this study. The gene had only 2 transcript variants out of which only one transcript was experimentally verified and the other one was computationally predicted. This limited our ability to determine whether the predicted transcript has a distinct regulatory or functional role. In the future, we aim to validate the predicted homologs using wet-lab experiments such as LC-MS/MS protein identification, and DNA-binding assays.
+    </p>
+</section>
+{% endblock %}

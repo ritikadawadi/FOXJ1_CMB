@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% block title %}Home — CMB Final Project{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="organelle organelle-1"></div>
+    <div class="organelle organelle-2"></div>
+    <div class="organelle organelle-3"></div>
+
+    <div class="hero-content">
+        <h1>Cell and Molecular Biology</h1>
+        <p class="hero-authors">Ritika Dawadi &amp; Shubhashree Shahi</p>
+        <p>
+            This website was created for the Cell and Molecular Biology Lab Final Project.
+            This class is taught by Dr. Paramjeet S. Bagga at Ramapo College of New Jersey.
+        </p>
+        <p>
+            "You have purified a protein by a combination of Molecular Sieve (Gel-Filtration),
+            Ion-Exchange and Affinity chromatography from cultured HeLa cells. You have been
+            able to determine a partial amino acid sequence of the purified protein. You are
+            excited about the brand-new discovery of a protein which has never been studied
+            before. You would like to determine the structure and function of this protein
+            and its gene".
+        </p>
+        <div class="sequence-block">
+            <div class="sequence-label">Partial Amino Acid Sequence</div>
+            <code class="sequence">SGAGPAEEAGPEGGLEEPDALDDSLTSLQWLQEFSILNAKAPALPPGGTDPHGYHQVASGPAPGSPLAADPACLGQPHTPGKPTSSCTSRSAPPGLQAPPPDDVDYATNPHVKPPYSYATLICMAMQASKAT
+                KITLSAIYKWITDNFCYFRHADPTWQNSIRHNLSLNKCFIKVPREKDEPGKGGFWRIDPQYAERLLSGAF
+                KKRRLPPVHIHPAFARQAAQEPSAVPRAGPLTVNTEAQQLLREFEEAAEGTGWGAGEGRLGHKRKQPLPK
+                RVAKVPRPPSTLLPTPEEQGELEPLKGNFDWEAIFDAGTLGGELGALEALELSPPLSPASHVDVDLTIHG
+                RHIDCPATWGPSVEQAADSLDFDETFLATSFLQHPWDESGSGCLPPEPLFEAG</code>
+        </div>
+        <div class="hero-buttons">
+            <a href="{{ url_for('introduction') }}" class="btn btn-primary">
+                Get Started →
+            </a>
+            <a href="{{ url_for('results') }}" class="btn btn-outline">
+                View Results
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="content-section home-structure-showcase">
+    <h2 class="home-structure-title"> <em>FOXJ1</em></h2>
+    <p class="home-structure-lead">
+      
+    </p>
+    <div class="home-structure-stage" aria-label="3D protein viewer frame">
+        <div class="home-structure-stage__inner">
+            <div class="home-viewer-toolbar" role="toolbar" aria-label="3D display options">
+                <span class="home-viewer-toolbar__label">Style</span>
+                <div class="home-viewer-toolbar__modes" role="group" aria-label="Coloring style">
+                    <button type="button" class="home-viewer-mode is-active" data-style="structure" aria-pressed="true">Secondary structure</button>
+                    <button type="button" class="home-viewer-mode" data-style="rainbow" aria-pressed="false">Rainbow (N→C)</button>
+                    <button type="button" class="home-viewer-mode" data-style="trace" aria-pressed="false">Slim trace</button>
+                </div>
+                <button type="button" class="home-viewer-spin is-on" id="home-viewer-spin" aria-pressed="true" title="Slow automatic rotation">Auto-rotate</button>
+            </div>
+            <div class="pdb-viewer-wrap pdb-viewer-wrap--home">
+                <div id="pdb-viewer-home" class="pdb-viewer pdb-viewer--home" role="img" aria-label="3D model of FOXJ1 SWISS-MODEL model 01"></div>
+            </div>
+        </div>
+    </div>
+    <p class="pdb-viewer-hint pdb-viewer-hint--home">
+        Drag to rotate, scroll or pinch to zoom. 
+       
+    </p>
+    <nav class="home-quick-nav" aria-label="Site sections">
+        <a href="{{ url_for('introduction') }}" class="home-quick-nav__link">Introduction</a>
+        <a href="{{ url_for('tools') }}" class="home-quick-nav__link">Tools &amp; Methods</a>
+        <a href="{{ url_for('results') }}" class="home-quick-nav__link">Results</a>
+        <a href="{{ url_for('discussion') }}" class="home-quick-nav__link">Discussion</a>
+        <a href="{{ url_for('references') }}" class="home-quick-nav__link">References</a>
+        <a href="{{ url_for('credits') }}" class="home-quick-nav__link">Credits</a>
+    </nav>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://3dmol.csb.pitt.edu/build/3Dmol-min.js" crossorigin="anonymous"></script>
+<script>
+(function () {
+  var pdbUrl = "{{ url_for('static', filename='images/results-2/model_01.pdb') }}";
+  var BG = "#101a14";
+  var viewer = null;
+  var spinOn = true;
+  var spinPausedByDrag = false;
+  var rafId = 0;
+
+  function applyHomeStyle(v, mode) {
+    if (!v) return;
+    if (mode === "structure") {
+      v.setStyle({}, { cartoon: { style: "oval", colorscheme: "ssJmol" } });
+    } else if (mode === "rainbow") {
+      v.setStyle({}, { cartoon: { style: "oval", color: "spectrum" } });
+    } else if (mode === "trace") {
+      v.setStyle({}, { cartoon: { style: "trace", color: "spectrum" } });
+    }
+    v.render();
+  }
+
+  function spinLoop() {
+    if (viewer && spinOn && !spinPausedByDrag) {
+      viewer.rotate(0.22, "y");
+      viewer.render();
+    }
+    rafId = requestAnimationFrame(spinLoop);
+  }
+
+  function wireToolbar(viewerEl) {
+    var modes = document.querySelectorAll(".home-viewer-mode");
+    var spinBtn = document.getElementById("home-viewer-spin");
+    modes.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var mode = btn.getAttribute("data-style");
+        modes.forEach(function (b) {
+          b.classList.toggle("is-active", b === btn);
+          b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+        });
+        applyHomeStyle(viewer, mode);
+      });
+    });
+    if (spinBtn) {
+      spinBtn.addEventListener("click", function () {
+        spinOn = !spinOn;
+        spinBtn.classList.toggle("is-on", spinOn);
+        spinBtn.setAttribute("aria-pressed", spinOn ? "true" : "false");
+      });
+    }
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      spinOn = false;
+      if (spinBtn) {
+        spinBtn.classList.remove("is-on");
+        spinBtn.setAttribute("aria-pressed", "false");
+      }
+    }
+    var pause = function () { spinPausedByDrag = true; };
+    var resumeSoon = function () {
+      setTimeout(function () { spinPausedByDrag = false; }, 600);
+    };
+    viewerEl.addEventListener("mousedown", pause);
+    viewerEl.addEventListener("touchstart", pause, { passive: true });
+    viewerEl.addEventListener("mouseup", resumeSoon);
+    viewerEl.addEventListener("touchend", resumeSoon);
+  }
+
+  function loadPdb(elementId, url) {
+    var el = document.getElementById(elementId);
+    if (!el || typeof $3Dmol === "undefined") return;
+    viewer = $3Dmol.createViewer(el, { backgroundColor: BG });
+    fetch(url)
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(function (data) {
+        viewer.addModel(data, "pdb");
+        applyHomeStyle(viewer, "structure");
+        viewer.zoomTo();
+        viewer.render();
+        wireToolbar(el);
+        window.addEventListener("resize", function () { viewer.resize(); });
+        cancelAnimationFrame(rafId);
+        spinLoop();
+      })
+      .catch(function () {
+        el.innerHTML =
+          '<p style="padding:1.25rem;text-align:center;color:#f0c987">Could not load the 3D model. Serve the site over HTTP/S and ensure <code>static/images/results-2/model_01.pdb</code> exists.</p>';
+      });
+  }
+
+  function init() {
+    loadPdb("pdb-viewer-home", pdbUrl);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+{% endblock %}

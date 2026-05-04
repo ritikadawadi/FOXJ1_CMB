@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Results — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Results</h1>
+</div>
+
+<nav class="results-nav">
+    <a href="{{ url_for('results_page', page_num=1) }}">Finding the Homolog</a>
+    <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene</a>
+    <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function</a>
+    <a href="{{ url_for('results_page', page_num=4) }}">Homolog Structure</a>
+    <a href="{{ url_for('results_page', page_num=5) }}">Future Work</a>
+</nav>
+
+<section class="content-section">
+  
+    <p>
+        We started with an unknown protein sequence and used bioinformatics tools to identify its human homolog (FOXJ1), map how the gene is organized, describe what the protein does and where it acts, model its structure in 3D, and outline proposed wet-lab follow-up. The five sections below follow that path.
+    </p>
+
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-icon">🔎</div>
+            <h3>Finding the Homolog</h3>
+            <p>We ran a BLASTp search and identified FOXJ1 as the closest human match. This section shows the top hits, the phylogenetic tree, and the pairwise alignment to the human protein.</p>
+            <a href="{{ url_for('results_page', page_num=1) }}" class="btn btn-outline" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details →</a>
+        </div>
+        <div class="card">
+            <div class="card-icon">🧬</div>
+            <h3>Homolog Gene</h3>
+            <p>Here we look at where the FOXJ1 gene sits on chromosome 17, how its exons and introns are laid out, what promoter elements are upstream of it, and what mRNA transcripts it produces.</p>
+            <a href="{{ url_for('results_page', page_num=2) }}" class="btn btn-outline" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details →</a>
+        </div>
+        <div class="card">
+            <div class="card-icon">👩🏻‍🔬</div>
+            <h3>Homolog Protein Function</h3>
+            <p>This section covers what FOXJ1 actually does in the cell, which tissues it is expressed in, where it is found inside the cell, and which proteins it works with.</p>
+            <a href="{{ url_for('results_page', page_num=3) }}" class="btn btn-outline" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details →</a>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔬</div>
+            <h3>Homolog Structure</h3>
+            <p>We predicted the secondary and 3D structure of FOXJ1 using JPred4, PSIPRED, SWISS-MODEL, and AlphaFold. This section shows the models, domain layout, and interactive 3D viewers.</p>
+            <a href="{{ url_for('results_page', page_num=4) }}" class="btn btn-outline" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details →</a>
+        </div>
+        <div class="card">
+            <div class="card-icon">🧫</div>
+            <h3>Future Work</h3>
+            <p>We summarize how FOXJ1 frames our query protein and propose two wet-lab follow-ups: a gene-expression assay in human airway cells and an EMSA to test DNA binding of the novel protein’s forkhead-like region against a FOXJ1 consensus sequence.</p>
+            <a href="{{ url_for('results_page', page_num=5) }}" class="btn btn-outline" style="margin-top: 1rem; padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Details →</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

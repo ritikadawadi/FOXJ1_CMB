@@ -1,0 +1,325 @@
+{% extends "base.html" %}
+{% block title %}Homolog Structure — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>The Structure of FOXJ1</h1>
+    <p>Secondary structure predictions, homology models, and AlphaFold analysis.</p>
+</div>
+
+<nav class="results-nav">
+    <a href="{{ url_for('results_page', page_num=1) }}">Finding the Homolog</a>
+    <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene</a>
+    <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function</a>
+    <a href="{{ url_for('results_page', page_num=4) }}" class="active">Homolog Structure</a>
+    <a href="{{ url_for('results_page', page_num=5) }}">Future Work</a>
+</nav>
+
+<section class="content-section">
+
+
+    <p>
+        All structure predictions and secondary structure analyses were run on the <strong>395-residue query sequence</strong> used in our BLAST analysis. The full-length human FOXJ1 protein is 421 amino acids long (RefSeq NP_001445.2), so there is a small gap at the ends.
+    </p>
+
+    <h2>Protein size and molecular weight</h2>
+    <p>
+        The table below shows the two versions of FOXJ1 we refer to on this page, their lengths, and estimated molecular weights. Estimates use an average of approximately 110 Da per amino acid.
+    </p>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Construct</th>
+                <th>Length (aa)</th>
+                <th>Est. MW (approx.)</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Analysis / query alignment</td>
+                <td>395</td>
+                <td>≈43 kDa</td>
+                <td>Used for all predictions on this page (JPred, PSIPRED, Swiss-Model PDBs, AlphaFold view)</td>
+            </tr>
+            <tr>
+                <td>Human FOXJ1 (RefSeq mature product)</td>
+                <td>421 (NP_001445.2)</td>
+                <td>≈46 to 47 kDa</td>
+                <td>Slightly longer than our query due to short N- and C-terminal segments not covered by the alignment</td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+    <h2>Secondary structure predictions</h2>
+    <p>
+        We ran the sequence through JPred4 and PSIPRED. Each method labels positions as helix, beta strand, or coil from the amino acid sequence alone.
+    </p>
+
+    <h3>JPred4</h3>
+    <p>
+        The full 395-residue sequence was submitted to <a href="https://www.compbio.dundee.ac.uk/jpred4/index.html">JPred4</a> at the University of Dundee. JPred combines several neural network methods to assign each amino acid as helix (H), beta strand (E), or coil, and gives a confidence score for each position.
+    </p>
+    <div class="figure figure--image" id="figure-1">
+        <img src="{{ url_for('static', filename='images/results-2/jpred.png') }}" width="1200" height="700" alt="JPred4 secondary structure prediction output for FOXJ1" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 1. JPred4 for FOXJ1 (1 to 395): pink = helix, yellow = strand, grey = coil. Mostly helices and loops, little sheet, as expected for a forkhead protein.
+            <strong>Source:</strong> <a href="https://www.compbio.dundee.ac.uk/jpred4/index.html">JPred4</a>.
+        </div>
+    </div>
+    <p>
+        <a href="#figure-1" class="figure-callout">Figure 1</a> shows several alpha-helical blocks with coil between them and only short strand segments, consistent with a forkhead-type transcription factor.
+    </p>
+
+    <h3>PSIPRED</h3>
+    <p>
+        The same sequence was run through <a href="http://bioinf.cs.ucl.ac.uk/psipred/">PSIPRED</a> at University College London. PSIPRED color-codes each amino acid by its predicted type: pink for helix, yellow for beta strand, and grey for coil. The two figures below come from the same run and both show the same result.
+    </p>
+    <div class="figure figure--image" id="figure-2">
+        <img src="{{ url_for('static', filename='images/results-2/psipred-sequence-plot.png') }}" width="1200" height="700" alt="PSIPRED sequence plot for FOXJ1: helix pink, strand yellow, coil grey" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 2. PSIPRED sequence plot (1 to 395); colours as <a href="#figure-1" class="figure-callout">Figure 1</a>. Sparse strands, agrees with JPred4.
+            <strong>PSIPRED:</strong> <a href="http://bioinf.cs.ucl.ac.uk/psipred/?uuid=765f458c-3e77-11f1-b8ea-00163e100466">this run</a>;
+            <a href="https://doi.org/10.1093/nar/gkz297">Buchan &amp; Jones 2019</a> <a href="#ref-6" class="ref-callout">[6]</a>.
+        </div>
+    </div>
+    <div class="figure figure--image" id="figure-3">
+        <img src="{{ url_for('static', filename='images/results-2/psipredChart.png') }}" width="1200" height="700" alt="PSIPRED chart view for FOXJ1" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 3. PSIPRED chart for the same submission as <a href="#figure-2" class="figure-callout">Figure 2</a> (summary of helix/strand/coil propensities).
+            <strong>Source:</strong> same as <a href="#figure-2" class="figure-callout">Figure 2</a>.
+        </div>
+    </div>
+    <p>
+        JPred4 and PSIPRED share the same result: FOXJ1 is helix-rich with little beta sheet, in line with the FOX family and with the 3D models below.
+    </p>
+
+    <h2>Predicted homology models (SWISS-MODEL), <em>PREDICTED</em></h2>
+    <p>
+        We used <a href="https://swissmodel.expasy.org/">SWISS-MODEL</a> for homology models. The server aligns our sequence to templates with known experimental structures and returns 3D coordinates. Output is computational, not a crystal structure.
+    </p>
+    <p>
+        SWISS-MODEL returned two models. Model 01 is the stronger one and our main 3D reference. Model 02 uses a lower-identity X-ray template and is only for comparison.
+       
+    </p>
+
+    <div class="figure figure--image figure--pair" id="figure-4" role="group" aria-label="Swiss-Model model summary cards">
+        <div class="figure--pair__grid">
+            <figure class="figure--pair__cell">
+                <img src="{{ url_for('static', filename='images/results-2/swiss-11.png') }}" width="560" height="400" alt="Swiss-Model Model 01: GMQE 0.59, template FOXJ1 from AlphaFold DB" loading="lazy" decoding="async">
+                <span class="figure--pair__label">(A) Model 01, recommended</span>
+                <p class="figure--pair__subcap">Template Q92949 (AlphaFold), GMQE 0.59, 97.97% identity.</p>
+            </figure>
+            <figure class="figure--pair__cell">
+                <img src="{{ url_for('static', filename='images/results-2/siwss2.png') }}" width="560" height="400" alt="Swiss-Model Model 02: GMQE 0.17, template 2C6Y" loading="lazy" decoding="async">
+                <span class="figure--pair__label">(B) Model 02, lower confidence</span>
+                <p class="figure--pair__subcap">Template 2C6Y, GMQE 0.17, QMEANDisCo 0.62 ± 0.08; 1× Mg modelled.</p>
+            </figure>
+        </div>
+        <div class="figure-caption">
+            Figure 4. SWISS-MODEL summary cards (predicted models, not experimental).
+            <strong>Ref:</strong> <a href="https://doi.org/10.1093/nar/gky427">Waterhouse et al., NAR 2018</a> <a href="#ref-26" class="ref-callout">[26]</a>;
+            <a href="https://swissmodel.expasy.org/interactive/556ANH/models/">project</a>.
+        </div>
+    </div>
+
+    <h3>Predicted homology model 1 </h3>
+    <p>
+        Model 01 was built using an AlphaFold template based on UniProt entry Q92949. The sequence identity between this template and FOXJ1 is 97.97%, which is very high and means the template is closely matched to our protein. The model scored a GMQE of 0.59, which falls within a range generally considered acceptable for comparative modelling. Because of its high sequence identity and reasonable model quality score, Model 01 is used as the main three-dimensional reference for the structural analysis below.</p>
+    <div class="pdb-viewer-wrap" aria-label="Interactive 3D structure model 1">
+        <h4>Interactive 3D structure (in-browser)</h4>
+        <div id="pdb-viewer-model1" class="pdb-viewer" role="img" aria-label="3D cartoon of model 01"></div>
+        <p class="pdb-viewer-hint">Drag to rotate, scroll or pinch to zoom. Embedding via
+            <a href="https://3dmol.csb.pitt.edu/">3Dmol.js</a>
+            (<a href="https://doi.org/10.1093/nar/gkac127">Rego &amp; Koes, <em>Nucleic Acids Res.</em> 2022</a> <a href="#ref-20" class="ref-callout">[20]</a>).
+        </p>
+    </div>
+    <p>
+        <a class="btn btn-outline" style="display:inline-block;margin-top:0.5rem" href="{{ url_for('static', filename='images/results-2/model_01.pdb') }}" download>Download model_01.pdb</a>
+    </p>
+
+    <h3>Predicted homology model 2, lower-confidence X-ray template</h3>
+    <p>
+        Model 02 was built using PDB 2C6Y, which is a structure of FOXK2 bound to DNA at 2.40 Å resolution. However, this template only shares 56% sequence identity with FOXJ1, which is relatively low. The model also scored poorly, with a GMQE of 0.17 and a QMEANDisCo of 0.62 ± 0.08, meaning confidence in the model quality is limited. 
+    </p>
+    <div class="pdb-viewer-wrap" aria-label="Interactive 3D structure model 2">
+        <h4>Interactive 3D structure (in-browser)</h4>
+        <div id="pdb-viewer-model2" class="pdb-viewer" role="img" aria-label="3D cartoon of model 02"></div>
+        <p class="pdb-viewer-hint">Compare to model 01. Embedding via <a href="https://3dmol.csb.pitt.edu/">3Dmol.js</a>
+            (Rego &amp; Koes, <em>Nucleic Acids Res.</em>, 2022 <a href="#ref-20" class="ref-callout">[20]</a>).
+        </p>
+    </div>
+    <p>
+        <a class="btn btn-outline" style="display:inline-block;margin-top:0.5rem" href="{{ url_for('static', filename='images/results-2/model_02.pdb') }}" download>Download model_02.pdb</a>
+    </p>
+
+    <h2>Predicted structure, AlphaFold Database (human <em>FOXJ1</em>), <em>PREDICTED</em></h2>
+    <p>
+        We also used the <a href="https://alphafold.ebi.ac.uk/entry/Q92949" rel="noopener">AlphaFold/EBI</a> entry for human FOXJ1 (Q92949). The database stores a pre-computed prediction from sequence only.
+    </p>
+    <p>
+        In the viewer, colour tracks pLDDT: blue is highest confidence (&gt;90), then cyan (70 to 90), yellow (50 to 70), orange (&lt;50). The figure pairs the 3D view with a PAE map for pairwise errors. pTM for this entry is <strong>0.32</strong>.
+    </p>
+    <div class="figure figure--image" id="figure-5">
+        <img src="{{ url_for('static', filename='images/results-2/alpha_fold.png') }}" width="1200" height="700" alt="AlphaFold viewer for human FOXJ1: pLDDT colouring, pTM=0.32, PAE heatmap 1-395" loading="lazy" decoding="async">
+        <div class="figure-caption">
+            Figure 5. <strong><em>PREDICTED</em></strong> AlphaFold (Q92949, 1 to 395): pLDDT colouring (left), core blue/cyan and tails orange. PAE (right): ordered core about 79 to 200. pTM = 0.32.
+            <strong>Links:</strong> <a href="https://alphafold.ebi.ac.uk/entry/Q92949">EBI Q92949</a>;
+            <a href="https://doi.org/10.1093/nar/gkab1061">AF DB (Varadi et al.)</a> <a href="#ref-23" class="ref-callout">[23]</a>;
+            <a href="https://doi.org/10.1038/s41586-021-03819-2">AlphaFold (Jumper et al.)</a> <a href="#ref-15" class="ref-callout">[15]</a>.
+        </div>
+    </div>
+
+    <h2>Tertiary structure, what the 3D shape looks like</h2>
+    <p>
+        From <a href="#figure-4" class="figure-callout">Figure 4</a> and <a href="#figure-5" class="figure-callout">Figure 5</a>, FOXJ1 has a compact helical core and long flexible tails. The folded segment shows up as a dense block in SWISS-MODEL and AlphaFold; the termini stay poorly defined and AlphaFold colours them orange (low pLDDT).
+    </p>
+    <p>
+        Transcription factors often combine a folded DNA-binding core with flexible tails that take partners, PTMs, and signalling into account.
+    </p>
+    <p>
+        FOXJ1 is a FOX-family forkhead factor. In the DNA-binding region, three helices pack as a bundle with two wing loops. Helix H3 sits in the DNA major groove; the wings contact the backbone. That layout is called a winged-helix fold.
+    </p>
+
+    <h3>Active site, the DNA-binding surface</h3>
+    <p>
+        FOXJ1 is not an enzyme, so it has no catalytic active site in the usual sense. The functional surface is the forkhead DNA-binding face: basic side chains (arginine, lysine, histidine) point toward the phosphates, and hydrophobic packing stabilises the helix bundle. CDD (<a href="#figure-6" class="figure-callout">Figure 6</a>) flags this segment about residues 112 to 190. <a href="https://www.rcsb.org/structure/2C6Y">PDB 2C6Y</a> shows a related forkhead domain on DNA (wwPDB <a href="#ref-3" class="ref-callout">[3]</a>).
+    </p>
+
+    <h3>Post-translational modifications</h3>
+    <p>
+        FOXJ1 is regulated after translation like many transcription factors. Literature and proteomics report phosphorylation on FOXJ1 and related FOX proteins; kinase sites are common in the flexible tails. Full PTM lists are on <a href="https://www.uniprot.org/uniprotkb/Q92949/entry#ptm_processing">UniProt Q92949, PTM/Processing</a> <a href="#ref-21" class="ref-callout">[21]</a>.
+    </p>
+
+    <h3>Quaternary structure</h3>
+    <p>
+        FOXJ1 binds DNA as a monomer. It does not show a stable dimer interface like some enzymes. At promoters it still works together with other proteins (e.g. RFX3) in complexes that depend on cell context.
+    </p>
+
+    <h2>Domain layout, sizes, and CDD scan</h2>
+    <p>
+        <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml">CDD</a> and <a href="https://www.ebi.ac.uk/interpro/">InterPro</a> were run on the 395-residue query. <a href="#figure-6" class="figure-callout">Figure 6</a> shows one hit, FH_FOXJ1, inside the broader FH_FOX superfamily. We split the query into three regions:
+    </p>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Approx. residues</th>
+                <th>Length</th>
+                <th>Secondary structure (predicted)</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>N-terminal extension</td>
+                <td>≈ 1 to 111</td>
+                <td>≈ 111 aa</td>
+                <td>Mostly coil, with short amphipathic helices (<a href="#figure-1" class="figure-callout">Figures 1</a> to <a href="#figure-3" class="figure-callout">3</a>)</td>
+                <td>Regulatory spacer; contains parts of the acidic activation regions (A1 to A4) that recruit RNA Pol II</td>
+            </tr>
+            <tr>
+                <td><strong>Forkhead DNA-binding domain (FH_FOXJ1)</strong></td>
+                <td>≈ 112 to 190</td>
+                <td>≈ 79 aa</td>
+                <td>Alpha-helix-rich core with short beta strands forming the two wing loops; winged-helix fold</td>
+                <td>Sequence-specific DNA binding; recognition helix H3 reads the 5'-TGTTT core; wings grip the backbone. This is the central functional unit of the whole protein.</td>
+            </tr>
+            <tr>
+                <td>C-terminal extension</td>
+                <td>≈ 191 to 395</td>
+                <td>≈ 205 aa</td>
+                <td>Mostly disordered loops and coil (shown in orange in AlphaFold, <a href="#figure-5" class="figure-callout">Figure 5</a>)</td>
+                <td>Contains additional transcriptional activation regions; sites for phosphorylation and other modifications; protein-protein interaction surface</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="font-size:0.88rem;color:var(--text-muted);">Domain boundaries read from the CDD alignment output (<a href="#figure-6" class="figure-callout">Figure 6</a>). Residue indices follow the query sequence.</p>
+
+    <div class="figure figure--image figure--cdd" id="figure-6">
+        <img src="{{ url_for('static', filename='images/protein_functions/functional_structural/cdd.svg') }}" width="1197" height="131" alt="NCBI CDD domain map for FOXJ1 showing FH_FOXJ1 block and putative DNA binding sites" loading="lazy">
+        <div class="figure-caption">
+            Figure 6. NCBI CDD map: FH_FOXJ1 (about 112 to 190, dark green), FH_FOX superfamily (pale green); triangles = predicted DNA-contact sites.
+            <strong>CDD:</strong> <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml">NCBI</a>,
+            <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=cd20023">cd20023</a>;
+            <a href="https://doi.org/10.1093/nar/gkz991">Lu et al. 2020</a> <a href="#ref-16" class="ref-callout">[16]</a>.
+        </div>
+    </div>
+
+    <h3>The forkhead domain in detail</h3>
+    <p>
+        The forkhead block (about 112 to 190, 79 residues) is the one structured domain in FOXJ1 and matches the FOX fold name. Three major helices and the two wings appear as helix plus short strand in JPred/PSIPRED (<a href="#figure-1" class="figure-callout">Figures 1</a> to <a href="#figure-3" class="figure-callout">3</a>), as blue/cyan in AlphaFold (<a href="#figure-5" class="figure-callout">Figure 5</a>), as the dark block on PAE, and as the dense core in the Model 01 viewer.
+    </p>
+    <p>
+        The DNA-facing side is basic (arginine, lysine, histidine); the inside of the bundle is hydrophobic. Winged-helix proteins usually show that split.
+    </p>
+    <p>
+        Despite its small size, this domain does the DNA recognition. Longer N- and C-terminal regions handle nuclear import, activation domains, and regulation.
+    </p>
+
+    <h3>Transmembrane localization</h3>
+    <p>
+        No transmembrane segment is predicted for FOXJ1 in AlphaFold, JPred, or PSIPRED. UniProt lists it as soluble and nuclear. Import likely uses signals near the forkhead domain.
+    </p>
+
+  
+
+    <h2>References</h2>
+    <ol class="references-list">
+        <li id="ref-3" value="3">Berman H.M., Westbrook J., Feng Z., <em>et al.</em> (2000). The Protein Data Bank. <em>Nucleic Acids Res.</em> 28(1):235–242. <a href="https://doi.org/10.1093/nar/28.1.235">doi:10.1093/nar/28.1.235</a>. Structure: <a href="https://www.rcsb.org/structure/2C6Y">PDB 2C6Y</a>.</li>
+        <li id="ref-6" value="6">Buchan D.W.A., Jones D.T. (2019). The PSIPRED Protein Analysis Workbench: 20 years on. <em>Nucleic Acids Res.</em> 47(W1):W402–W420. <a href="https://doi.org/10.1093/nar/gkz297">doi:10.1093/nar/gkz297</a>.</li>
+        <li id="ref-15" value="15">Jumper J., Evans R., Pritzel A., <em>et al.</em> (2021). Highly accurate protein structure prediction with AlphaFold. <em>Nature</em> 596:583–589. <a href="https://doi.org/10.1038/s41586-021-03819-2">doi:10.1038/s41586-021-03819-2</a>.</li>
+        <li id="ref-16" value="16">Lu S., Wang J., Chitsaz F., <em>et al.</em> (2020). CDD/SPARCLE: the conserved domain database in 2020. <em>Nucleic Acids Res.</em> 48(D1):D265–D268. <a href="https://doi.org/10.1093/nar/gkz991">doi:10.1093/nar/gkz991</a>.</li>
+        <li id="ref-20" value="20">Rego N., Koes D.R. (2022). 3Dmol.js: molecular graphics in the Jupyter notebook and beyond. <em>Nucleic Acids Res.</em> 50(W1):W39–W45. <a href="https://doi.org/10.1093/nar/gkac127">doi:10.1093/nar/gkac127</a>.</li>
+        <li id="ref-21" value="21">The UniProt Consortium (2021). UniProt: the universal protein knowledgebase in 2021. <em>Nucleic Acids Res.</em> 49(D1):D480–D489. <a href="https://doi.org/10.1093/nar/dkaa1100">doi:10.1093/nar/dkaa1100</a>. Entry <a href="https://www.uniprot.org/uniprotkb/Q92949/entry">Q92949</a>.</li>
+        <li id="ref-23" value="23">Varadi M., Anyango S., Deshpande M., <em>et al.</em> (2022). AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models. <em>Nucleic Acids Res.</em> 50(D1):D439–D447. <a href="https://doi.org/10.1093/nar/gkab1061">doi:10.1093/nar/gkab1061</a>.</li>
+        <li id="ref-26" value="26">Waterhouse A., Bertoni M., Bienert S., <em>et al.</em> (2018). SWISS-MODEL: homology modelling of protein structures and complexes. <em>Nucleic Acids Res.</em> 46(W1):W296–W303. <a href="https://doi.org/10.1093/nar/gky427">doi:10.1093/nar/gky427</a>.</li>
+    </ol>
+    <p class="note muted">JPred4: <a href="https://www.compbio.dundee.ac.uk/jpred4/index.html" target="_blank" rel="noopener">University of Dundee JPred4</a>.</p>
+
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://3dmol.csb.pitt.edu/build/3Dmol-min.js" crossorigin="anonymous"></script>
+<script>
+(function () {
+  var url1 = "{{ url_for('static', filename='images/results-2/model_01.pdb') }}";
+  var url2 = "{{ url_for('static', filename='images/results-2/model_02.pdb') }}";
+
+  function loadPdb(elementId, pdbUrl) {
+    var el = document.getElementById(elementId);
+    if (!el || typeof $3Dmol === "undefined") return;
+    var viewer = $3Dmol.createViewer(el, { backgroundColor: "#f4f7f0" });
+    fetch(pdbUrl)
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(function (data) {
+        viewer.addModel(data, "pdb");
+        viewer.setStyle({}, { cartoon: { style: "oval", colorscheme: "ssJmol" } });
+        viewer.zoomTo();
+        viewer.render();
+        window.addEventListener("resize", function () { viewer.resize(); });
+      })
+      .catch(function () {
+        el.innerHTML =
+          '<p style="padding:1.25rem;text-align:center;color:#b45309">Could not load the PDB. Ensure the site is served over HTTP and the file exists under <code>static/images/results-2/</code>.</p>';
+      });
+  }
+
+  function init() {
+    loadPdb("pdb-viewer-model1", url1);
+    loadPdb("pdb-viewer-model2", url2);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Credits, CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Credits</h1>
+
+</div>
+
+<section class="content-section">
+
+    <div class="team-section">
+        <div class="credit-card credit-card--contributions">
+            <h3>Ritika Dawadi</h3>
+            <p class="role">Website &amp; Results (50%)</p>
+            <ul class="credit-contributions">
+                <li>Webpage design, layout, and code</li>
+                <li>Home page</li>
+                <li>Introduction</li>
+                <li>Tools and Methods</li>
+                <li> Homolog Gene</li>
+                <li>Homolog Protein Function</li>
+                <li>Homolog Structure</li>
+            </ul>
+        </div>
+
+        <div class="team-photo-center">
+            <div class="team-photo-frame">
+                <img src="{{ url_for('static', filename='images/team.jpg') }}" alt="Ritika and Shubhashree">
+            </div>
+        </div>
+
+        <div class="credit-card credit-card--contributions">
+            <h3>Shubhashree Shahi</h3>
+            <p class="role">Analysis &amp; diagrams (50%)</p>
+            <ul class="credit-contributions">
+                <li>Finding the homolog</li>
+                <li>Homolog Gene </li>
+                <li>Homolog Gene: gene diagram and transcript diagrams</li>
+                <li>Homolog protein function: function diagrams</li>
+                <li>Future Experiments</li>
+                <li>Discussion </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="highlight-box">
+        <p>
+            We both read the full write-up and agree with what is on this site, credits included.
+        
+        </p>
+    </div>
+</section>
+{% endblock %}

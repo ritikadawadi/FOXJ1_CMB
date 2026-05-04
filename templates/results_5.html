@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Future Work — CMB Final Project{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Future Experiments</h1>
+    <p>Proposed wet-lab experiments to relate the novel protein to human FOXJ1.</p>
+</div>
+
+<nav class="results-nav">
+    <a href="{{ url_for('results_page', page_num=1) }}">Finding the Homolog</a>
+    <a href="{{ url_for('results_page', page_num=2) }}">Homolog Gene</a>
+    <a href="{{ url_for('results_page', page_num=3) }}">Homolog Protein Function</a>
+    <a href="{{ url_for('results_page', page_num=4) }}">Homolog Structure</a>
+    <a href="{{ url_for('results_page', page_num=5) }}" class="active">Future Work</a>
+</nav>
+
+<section class="content-section">
+   
+
+    <h2>Future Experiments</h2>
+    <p>
+        The human homolog <em>FOXJ1</em>&rsquo;s gene structure, protein structure, and function provided us an insight into the possible structure and biological role of our novel protein. To validate the results further, we propose two wet lab experiments that would test whether our novel protein shares structural and functional attributes with <em>Homo sapiens</em> homolog FOXJ1.
+    </p>
+
+    <h3>Experiment 1: Gene Expression Assay</h3>
+    <p><strong>Objective:</strong> To test whether our novel protein can activate FOXJ1 target cilia genes in human epithelial cells by comparing expression levels of FOXJ1 target genes between cells expressing FOXJ1 and cells expressing the novel protein.</p>
+    <p><strong>Hypothesis:</strong> If the novel protein is functionally similar to human homolog of FOXJ1, then expressing our novel protein in human epithelial cells will increase the expression of FOXJ1 targeted genes involved in motile ciliogenesis.</p>
+    <p><strong>Background:</strong> FOXJ1 is a transcription factor that binds DNA and activates genes needed for motile cilia formation <a href="#ref-27" class="ref-callout">[27]</a>. These motile cilia are present in tissues such as airway epithelium, reproductive tract, and ependymal cells of the brain ventricles. Didon <em>et al.</em> found that transfecting FOXJ1 into primary human airway basal cells activated the promoters and induced the expression of cilia associated genes such as <em>DNAI1</em>, <em>SPAG6</em>, and <em>TEKT1</em> <a href="#ref-10" class="ref-callout">[10]</a>. So, a similar assay can be used to test whether our novel protein has similar function as that of human FOXJ1.</p>
+    <p><strong>Protocol:</strong> This experimental approach is based on Didon <em>et al.</em> (2013) <a href="#ref-10" class="ref-callout">[10]</a>.</p>
+    <ul>
+        <li><strong>Cell culture:</strong> Culture primary human airway basal cells.</li>
+        <li><strong>Transfection:</strong> Introduce empty vector, FOXJ1 expression plasmid, and novel protein plasmid into human airway basal cells. The FOXJ1 plasmid acts as a positive control, empty vector as negative control, and the novel protein plasmid is the experimental group.</li>
+        <li><strong>Gene expression Analysis:</strong> Use RT-PCR to quantify the induction of FOXJ1 related cilia genes such as <em>DNAI1</em>, <em>SPAG6</em>, and <em>TEKT1</em> across all three groups.</li>
+        <li><strong>Protein Confirmation:</strong> Use mass spectrometry to confirm the presence of FOXJ1 and novel protein in the cells.</li>
+    </ul>
+    <p><strong>Expected Results:</strong> If the expression of FOXJ1 related cilia genes such as <em>DNAI1</em>, <em>SPAG6</em>, and <em>TEKT1</em> is increased then we can confirm the functional similarity between our novel protein and human homolog FOXJ1.</p>
+
+    <h3>Experiment 2: Electrophoretic Mobility Shift Assay (EMSA)</h3>
+    <p><strong>Objective:</strong> To test whether the predicted DNA-binding region of our novel protein can bind to a FOXJ1 consensus DNA sequence.</p>
+    <p><strong>Hypothesis:</strong> If the novel protein contains a functional FOXJ1 DNA-binding domain, then the tagged DNA-binding region of the novel protein will bind to a FOXJ1 consensus DNA probe and form a DNA-protein complex which migrates slower through the gel than the free DNA.</p>
+    <p><strong>Background:</strong> FOXJ1 is a transcription factor that binds DNA through its forkhead DNA-binding domain. Arora <em>et al.</em> showed that recombinant human FOXJ1 protein can bind DNA and form gel-shifted complexes <a href="#ref-2" class="ref-callout">[2]</a>. EMSA is a standard method used to detect protein-DNA interactions because DNA bound to protein moves more slowly on a native gel than free DNA <a href="#ref-13" class="ref-callout">[13]</a>.</p>
+    <p><strong>Protocol:</strong> This experimental approach is based on Arora <em>et al.</em> (2025) <a href="#ref-2" class="ref-callout">[2]</a>.</p>
+    <ul>
+        <li><strong>Protein Preparation:</strong> Clone the DNA binding domain of our novel protein with a 6xHis tag.</li>
+        <li><strong>Control:</strong> Use the recombinant FOXJ1 DNA binding domain as the positive control. Use labeled DNA probes to be incubated alone without any protein to provide a baseline for the migration of unbound DNA. DNA probes incubated with BSA can be used as negative control to show that the shift is not due to non-specific binding.</li>
+        <li><strong>Probe preparation:</strong> Prepare a labeled DNA probe containing a FOXJ1 consensus binding sequence.</li>
+        <li><strong>EMSA analysis:</strong> Run the samples on a non-denaturing gel to detect formation of a shifted DNA-protein band. Lane 1 would contain the labeled DNA probe alone to show the migration of unbound DNA. Lane 2 would contain the labeled DNA probe with BSA as a negative control for nonspecific protein binding. Lane 3 would contain the labeled DNA probe with recombinant FOXJ1 DNA-binding domain as the positive control. Lane 4 would contain the labeled DNA probe with the tagged DNA-binding domain of the novel protein to test whether it binds the FOXJ1 consensus sequence.</li>
+    </ul>
+    <p><strong>Expected Result:</strong> If the novel protein DNA-binding domain binds to the DNA probe, lane 4 should show an upward shifted band. Lane 1 with DNA alone and lane 2 with DNA plus BSA should move faster and appear lower on the gel. Lane 3 with FOXJ1 DNA-binding domain should show an upward shift as the positive control. A similar shift in lane 4 would support that the novel protein can bind the FOXJ1 consensus DNA sequence.</p>
+
+    <h2>References</h2>
+    <ol class="references-list">
+        <li id="ref-2" value="2">Arora S, Nagarkar P, D&rsquo;Souza JS. Recombinant human FOXJ1 protein binds DNA, forms higher-order oligomers, has gel-shifting domains and contains intrinsically disordered regions. <em>Protein Expr Purif</em>. 2025 Mar;227:106622. <a href="https://doi.org/10.1016/j.pep.2024.106622">doi:10.1016/j.pep.2024.106622</a>. PMID: 39549898. <a href="https://pubmed.ncbi.nlm.nih.gov/39549898/">PubMed</a></li>
+        <li id="ref-10" value="10">Didon L, Zwick RK, Chao IW, Walters MS, Wang R, Hackett NR, Crystal RG. RFX3 modulation of FOXJ1 regulation of cilia genes in the human airway epithelium. <em>Respir Res</em>. 2013 Jul 3;14(1):70. <a href="https://doi.org/10.1186/1465-9921-14-70">doi:10.1186/1465-9921-14-70</a>. PMID: 23822649. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3710277/">PMC3710277</a></li>
+        <li id="ref-13" value="13">Hellman LM, Fried MG. Electrophoretic mobility shift assay (EMSA) for detecting protein-nucleic acid interactions. <em>Nat Protoc</em>. 2007;2(8):1849-1861. <a href="https://doi.org/10.1038/nprot.2007.249">doi:10.1038/nprot.2007.249</a>. PMID: 17703195. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2757439/">PMC2757439</a></li>
+        <li id="ref-27" value="27">Yu X, Ng C, Habacher H, <em>et al.</em> Foxj1 transcription factors are master regulators of the motile ciliogenic program. <em>Nat Genet</em>. 2008;40:1445-1453. <a href="https://doi.org/10.1038/ng.263">doi:10.1038/ng.263</a></li>
+    </ol>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+# Downloaded from: https://www.ebi.ac.uk/gxa/search?geneQuery=%5B%7B%22value%22%3A%22foxj1%22%7D%5D&species=&conditionQuery=%5B%5D&bs=%7B%22homo%20sapiens%22%3A%5B%22DEVELOPMENTAL_STAGE%22%5D%2C%22anolis%20carolinensis%22%3A%5B%22ORGANISM_PART%22%5D%2C%22bos%20taurus%22%3A%5B%22ORGANISM_PART%22%5D%2C%22chlorocebus%20sabaeus%22%3A%5B%22ORGANISM_PART%22%5D%2C%22equus%20caballus%22%3A%5B%22ORGANISM_PART%22%5D%2C%22gallus%20gallus%22%3A%5B%22ORGANISM_PART%22%5D%2C%22macaca%20mulatta%22%3A%5B%22ORGANISM_PART%22%5D%2C%22monodelphis%20domestica%22%3A%5B%22ORGANISM_PART%22%5D%2C%22mus%20musculus%22%3A%5B%22ORGANISM_PART%22%5D%2C%22sus%20scrofa%22%3A%5B%22ORGANISM_PART%22%5D%2C%22xenopus%20tropicalis%22%3A%5B%22ORGANISM_PART%22%5D%7D&ds=%7B%22kingdom%22%3A%5B%22animals%22%5D%7D#baseline
+# Timestamp: 2026-04-29T17:54:21.620Z
+# Query results for: [{"value":"foxj1"}], in conditions [], in species Homo sapiens
+# Ordering: By experiment type
+	10 week post conception	11 week post conception	12 week post conception	13 week post conception	16 week post conception	18 week post conception	19 week post conception	4 week post conception	5 week post conception	6 week post conception	7 week post conception	8 week post conception	9 week post conception	adolescent	elderly	fetal stage	infant	juvenile stage	middle adult	neonate	school age child	toddler	young adult
+Tissues, developmental stages - Human - Moreira et al - testis	2	2	6	1	2	108	16	14	12	13	7	6	3	26	55	NA	7	NA	65	NA	NA	574	36
+Tissues, developmental stages - Human - Moreira et al - kidney	28	51	34	26	9	36	42	17	7	4	8	31	27	NA	NA	NA	7	NA	NA	20	0	7	NA
+Tissues, developmental stages - Human - Moreira et al - forebrain	9	18	0	6	1	0	1	8	20	NA	18	23	19	0	1	NA	8	NA	0.5	0.9	0.7	0	0.7
+Tissues, developmental stages - Human - Moreira et al - liver	4	6	6	5	3	3	1	23	8	16	10	8	8	0	0	NA	0	NA	0	0.5	0	0	0
+Tissues, developmental stages - Human - Moreira et al - ovary	2	0.9	2	3	22	2	NA	12	5	9	11	6	4	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Tissues, developmental stages - Human - Moreira et al - hindbrain	38	58	6	4	34	NA	NA	29	21	31	30	36	34	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Tissues, developmental stages - Human - Moreira et al - heart	0	0	0.5	0	0	0	0	0	7	0	0	0	0	0	NA	NA	0	NA	0	0	NA	0	0
+Kraiczy et al intestinal cells - terminal ileum	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+Kraiczy et al intestinal cells - sigmoid colon	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	9	NA	NA	NA	NA	NA
+Kraiczy et al intestinal cells - proximal gut	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	4	NA	NA	NA	NA	NA	NA	NA
+Kraiczy et al intestinal cells - distal gut	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	13	NA	NA	NA	NA	NA	NA	NA
