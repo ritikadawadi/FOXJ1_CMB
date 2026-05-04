@@ -12,7 +12,7 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="{{ url_for('home') }}" class="nav-logo">
+            <a href="{{ url_for('index') }}" class="nav-logo">
                 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="18" cy="18" r="16" stroke="#9cd43e" stroke-width="1.5" opacity="0.6"/>
                     <ellipse cx="18" cy="18" rx="6" ry="16" stroke="#8d6e63" stroke-width="1.5" opacity="0.5"/>
@@ -26,7 +26,7 @@
             <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
             <ul class="nav-links">
-                <li><a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Home</a></li>
                 <li><a href="{{ url_for('introduction') }}" class="{% if request.endpoint == 'introduction' %}active{% endif %}">Introduction</a></li>
                 <li><a href="{{ url_for('tools') }}" class="{% if request.endpoint == 'tools' %}active{% endif %}">Tools & Methods</a></li>
                 <li class="nav-dropdown">
